@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Page principale -->
+  <url>
+    <loc>https://www.newvisiongroupsa.bj/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.newvisiongroupsa.bj/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.newvisiongroupsa.bj/?lang=en"/>
+  </url>
+
+  <!-- Pages dédiées -->
+  <url>
+    <loc>https://www.newvisiongroupsa.bj/a-propos</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.newvisiongroupsa.bj/a-propos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.newvisiongroupsa.bj/a-propos?lang=en"/>
+  </url>
+
+  <url>
+    <loc>https://www.newvisiongroupsa.bj/expertises</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.newvisiongroupsa.bj/expertises"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.newvisiongroupsa.bj/expertises?lang=en"/>
+  </url>
+
+  <url>
+    <loc>https://www.newvisiongroupsa.bj/zones</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.newvisiongroupsa.bj/zones"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.newvisiongroupsa.bj/zones?lang=en"/>
+  </url>
+
+  <url>
+    <loc>https://www.newvisiongroupsa.bj/produits</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.newvisiongroupsa.bj/produits"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.newvisiongroupsa.bj/produits?lang=en"/>
+  </url>
+
+</urlset>
