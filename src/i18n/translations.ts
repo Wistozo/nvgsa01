@@ -46,7 +46,7 @@ export const translations = {
       badge: 'Qui sommes-nous',
       title: 'À propos de',
       titleHighlight: 'New Vision Group',
-      description: 'Nous sommes un groupe sous régional reconnu depuis 2008, pour sa démarche humaine et sociétale. Avec nos 300 collaborateurs, nos clients et partenaires, nous travaillons continuellement pour la satisfaction des communautés territoriales.',
+      description: 'Nous sommes un groupe sous-régional reconnu depuis 2008 pour sa démarche humaine et sociétale. Avec nos 300+ collaborateurs, nos clients et partenaires, nous travaillons continuellement pour la satisfaction des communautés territoriales.',
       statsTitle: 'Quelques',
       statsHighlight: 'chiffres',
       mission: {
