@@ -53,7 +53,7 @@ export default function Footer() {
   return (
     <footer className="bg-nvg-dark text-white">
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
           {/* Company Info */}
           <div className="lg:col-span-1">
@@ -68,13 +68,13 @@ export default function Footer() {
                 <p className="text-nvg-orange text-sm">GROUP SA</p>
               </div>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
+            <p className="text-white/45 text-sm leading-relaxed mb-6">
               Plus de 15 ans d'expérience au service des communautés et organisations 
               publiques comme privées. Groupe sous-régional reconnu depuis 2008.
             </p>
             <div className="inline-block px-4 py-2 bg-nvg-blue/20 rounded-lg">
               <span className="text-nvg-orange font-semibold">Capital social:</span>
-              <span className="text-white ml-2">100 000 000 FCFA</span>
+              <span className="text-white ml-2">25 000 000 FCFA</span>
             </div>
           </div>
 
@@ -90,17 +90,17 @@ export default function Footer() {
                   {link.type === 'page' ? (
                     <Link
                       to={link.href}
-                      className="text-gray-400 hover:text-nvg-orange transition-colors flex items-center gap-2 group"
+                      className="text-white/45 hover:text-nvg-orange transition-colors flex items-center gap-2 group"
                     >
-                      <div className="w-1.5 h-1.5 bg-gray-600 rounded-full group-hover:bg-nvg-orange transition-colors" />
+                      <div className="w-1.5 h-1.5 bg-white/20 rounded-full group-hover:bg-nvg-orange transition-colors" />
                       {link.label}
                     </Link>
                   ) : (
                     <button
                       onClick={() => handleAnchorClick(link.href)}
-                      className="text-gray-400 hover:text-nvg-orange transition-colors flex items-center gap-2 group"
+                      className="text-white/45 hover:text-nvg-orange transition-colors flex items-center gap-2 group"
                     >
-                      <div className="w-1.5 h-1.5 bg-gray-600 rounded-full group-hover:bg-nvg-orange transition-colors" />
+                      <div className="w-1.5 h-1.5 bg-white/20 rounded-full group-hover:bg-nvg-orange transition-colors" />
                       {link.label}
                     </button>
                   )}
@@ -118,8 +118,8 @@ export default function Footer() {
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
-                  <span className="text-gray-400 flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-gray-600 rounded-full" />
+                  <span className="text-white/45 flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-white/20 rounded-full" />
                     {service}
                   </span>
                 </li>
@@ -136,27 +136,27 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-nvg-orange flex-shrink-0 mt-0.5" />
-                <span className="text-gray-400 text-sm">
-                  Lokossa, Mono, Bénin<br />
-                  BP 248 Lokossa
+                <span className="text-white/45 text-sm">
+                  Cotonou, Gbedjromèdé 16 Ampoules<br />
+                  Bénin
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-nvg-green flex-shrink-0" />
-                <span className="text-gray-400 text-sm">
+                <span className="text-white/45 text-sm">
                   +22901 94 74 74 11<br />
                   +22901 90 94 52 55
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-nvg-blue flex-shrink-0" />
-                <span className="text-gray-400 text-sm">
+                <span className="text-white/45 text-sm">
                   info@newvisiongroupsa.bj
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Globe className="w-5 h-5 text-nvg-orange flex-shrink-0" />
-                <span className="text-gray-400 text-sm">
+                <span className="text-white/45 text-sm">
                   www.newvisiongroupsa.bj
                 </span>
               </li>
@@ -184,12 +184,12 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm text-center md:text-left">
+            <p className="text-white/45 text-sm text-center md:text-left">
               © {new Date().getFullYear()} New Vision Group SA. Tous droits réservés.
             </p>
-            <p className="text-gray-500 text-sm flex items-center gap-1">
+            <p className="text-white/35 text-sm flex items-center gap-1">
               Fait avec <Heart className="w-4 h-4 text-nvg-orange fill-nvg-orange" /> au Bénin
             </p>
             <button

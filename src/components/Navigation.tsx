@@ -64,9 +64,6 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  /* ── Close menu on route change ── */
-  useEffect(() => { setIsMenuOpen(false); }, [location]);
-
   /* ── Body scroll lock when menu open ── */
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : '';
@@ -123,17 +120,17 @@ export default function Navigation() {
       </div>
 
       {/* ── Floating Action Bar ── */}
-      <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3 bg-white dark:bg-slate-900 rounded-full shadow-lg p-3 border border-nvg-orange/20">
+      <div className="hidden">
         <button
           onClick={toggleLanguage}
-          className="w-12 h-12 flex items-center justify-center rounded-full bg-nvg-orange text-white hover:bg-nvg-blue transition-colors font-bold text-sm"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-nvg-orange text-sm font-bold text-white transition-colors hover:bg-nvg-blue"
           title={language === 'fr' ? 'Switch to English' : 'Passer au Français'}
         >
           {language.toUpperCase()}
         </button>
         <button
           onClick={(e) => toggleThemeWithRipple(e.clientX, e.clientY)}
-          className="w-12 h-12 flex items-center justify-center rounded-full bg-nvg-blue text-white hover:bg-nvg-orange transition-colors"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-nvg-blue text-white transition-colors hover:bg-nvg-orange"
           title={theme === 'light' ? 'Dark mode' : 'Light mode'}
         >
           {theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
@@ -155,7 +152,7 @@ export default function Navigation() {
           </div>
           <div className="flex items-center gap-4">
             <span className="text-xs text-nvg-orange font-medium hidden sm:block">
-              {t.nav?.capital ?? 'Capital Social : 100 000 000 FCFA'}
+              {t.nav?.capital ?? 'Capital social : 25 000 000 FCFA'}
             </span>
             <button onClick={toggleLanguage} className="text-xs font-semibold bg-white/10 px-3 py-1 rounded hover:bg-white/20 transition-colors">
               {language.toUpperCase()}
@@ -169,7 +166,7 @@ export default function Navigation() {
 
       {/* ── Main Navigation (ghost → solid) ── */}
       <nav className={`fixed left-0 right-0 z-40 transition-all duration-300 ${isScrolled ? 'top-0 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md shadow-nvg' : 'top-8 bg-gradient-to-b from-black/50 to-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24">
           <div className="flex justify-between items-center h-16">
 
             {/* Logo */}
@@ -209,7 +206,7 @@ export default function Navigation() {
             <div className="hidden lg:flex items-center gap-3">
               <Button
                 onClick={handleContactClick}
-                className="bg-gradient-to-r from-nvg-blue to-nvg-blue-light hover:from-nvg-orange hover:to-nvg-orange-light text-white font-medium px-6 transition-all duration-300"
+                className="bg-nvg-orange px-6 font-semibold text-white transition-all duration-300 hover:bg-nvg-orange-light"
               >
                 Nous contacter
               </Button>

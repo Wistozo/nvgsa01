@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import {
   MapPin,
@@ -27,7 +28,6 @@ const keywords = [
 ];
 
 export default function Contact() {
-  const sectionRef = useRef<HTMLDivElement>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading]   = useState(false);
   const [error, setError]           = useState<string | null>(null);
@@ -35,23 +35,6 @@ export default function Contact() {
     name: '', email: '', phone: '', subject: '', message: ''
   });
   const { t } = useTranslation();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.remove('opacity-0');
-            entry.target.classList.add('animate-slide-up');
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-    const elements = sectionRef.current?.querySelectorAll('.reveal');
-    elements?.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -110,7 +93,6 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      ref={sectionRef}
       className="relative bg-nvg-dark overflow-hidden"
     >
       {/* Wave transition depuis Partners (fond blanc) — masquée en mode nuit */}
@@ -156,10 +138,16 @@ export default function Contact() {
       </div>
 
       {/* ── Main content ── */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 pt-20 pb-24">
 
         {/* Bold Headline */}
-        <div className="reveal opacity-0 text-center mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          viewport={{ once: true, margin: '-5%' }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-20"
+        >
           <p className="inline-flex items-center gap-3 text-white/25 text-[10px] uppercase tracking-[0.35em] font-semibold mb-10">
             <span className="w-10 h-px bg-nvg-orange/30 inline-block" />
             Contact & Collaboration
@@ -185,13 +173,19 @@ export default function Contact() {
           <p className="text-lg text-white/40 max-w-xl mx-auto mt-8 leading-relaxed">
             {t.contact.description}
           </p>
-        </div>
+        </motion.div>
 
         {/* ── Grid: coordonnées + formulaire ── */}
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 xl:gap-20">
 
           {/* Left — Coordonnées éditorialement numérotées */}
-          <div className="reveal opacity-0 lg:col-span-2 lg:border-r lg:border-white/[0.06] lg:pr-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
+            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            viewport={{ once: true, margin: '-5%' }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-2 lg:border-r lg:border-white/[0.06] lg:pr-8"
+          >
             <p className="text-[10px] uppercase tracking-[0.3em] text-white/25 font-semibold mb-8">
               Nos coordonnées
             </p>
@@ -251,12 +245,15 @@ export default function Contact() {
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right — Formulaire */}
-          <div
-            className="reveal opacity-0 lg:col-span-3"
-            style={{ animationDelay: '0.15s' }}
+          <motion.div
+            initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
+            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            viewport={{ once: true, margin: '-5%' }}
+            transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-3"
           >
             <div className="glow-orange bg-white/[0.03] border border-white/[0.07] rounded-3xl p-8 sm:p-10 backdrop-blur-sm">
               <div className="mb-8">
@@ -360,7 +357,7 @@ export default function Contact() {
                 </form>
               )}
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>

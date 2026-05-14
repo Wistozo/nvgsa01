@@ -6,49 +6,49 @@ const items = [
     icon: Sun,
     name: 'Sacs solaires',
     sub: 'Technologie LIGHT-TC',
-    bg: 'bg-amber-100 dark:bg-amber-500/10',
-    text: 'text-amber-800 dark:text-amber-300',
-    iconBg: 'bg-amber-200/70 dark:bg-amber-500/20',
+    bg: 'bg-nvg-orange/10 dark:bg-nvg-orange/15',
+    text: 'text-nvg-orange dark:text-nvg-orange-light',
+    iconBg: 'bg-nvg-orange/15 dark:bg-nvg-orange/20',
   },
   {
     icon: Shirt,
     name: 'Tenues scolaires',
     sub: 'Uniformes & kaki',
-    bg: 'bg-blue-100 dark:bg-blue-500/10',
-    text: 'text-blue-800 dark:text-blue-300',
-    iconBg: 'bg-blue-200/70 dark:bg-blue-500/20',
+    bg: 'bg-nvg-blue/10 dark:bg-nvg-blue/15',
+    text: 'text-nvg-blue dark:text-nvg-blue-light',
+    iconBg: 'bg-nvg-blue/15 dark:bg-nvg-blue/25',
   },
   {
     icon: Heart,
     name: 'Serviettes hygiéniques',
     sub: 'Réutilisables & durables',
-    bg: 'bg-rose-100 dark:bg-rose-500/10',
-    text: 'text-rose-800 dark:text-rose-300',
-    iconBg: 'bg-rose-200/70 dark:bg-rose-500/20',
+    bg: 'bg-nvg-orange/10 dark:bg-nvg-orange/15',
+    text: 'text-nvg-orange dark:text-nvg-orange-light',
+    iconBg: 'bg-nvg-orange/15 dark:bg-nvg-orange/20',
   },
   {
     icon: FlaskConical,
     name: 'Gels biomédicaux',
     sub: 'Hydro-alcooliques',
-    bg: 'bg-teal-100 dark:bg-teal-500/10',
-    text: 'text-teal-800 dark:text-teal-300',
-    iconBg: 'bg-teal-200/70 dark:bg-teal-500/20',
+    bg: 'bg-nvg-green/10 dark:bg-nvg-green/15',
+    text: 'text-nvg-green dark:text-nvg-green-light',
+    iconBg: 'bg-nvg-green/15 dark:bg-nvg-green/20',
   },
   {
     icon: BookOpen,
     name: 'Kits scolaires',
     sub: 'Distribution nationale',
-    bg: 'bg-violet-100 dark:bg-violet-500/10',
-    text: 'text-violet-800 dark:text-violet-300',
-    iconBg: 'bg-violet-200/70 dark:bg-violet-500/20',
+    bg: 'bg-nvg-blue/10 dark:bg-nvg-blue/15',
+    text: 'text-nvg-blue dark:text-nvg-blue-light',
+    iconBg: 'bg-nvg-blue/15 dark:bg-nvg-blue/25',
   },
   {
     icon: GraduationCap,
     name: 'Formation pro.',
     sub: 'Couture & métiers',
-    bg: 'bg-green-100 dark:bg-green-500/10',
-    text: 'text-green-800 dark:text-green-300',
-    iconBg: 'bg-green-200/70 dark:bg-green-500/20',
+    bg: 'bg-nvg-green/10 dark:bg-nvg-green/15',
+    text: 'text-nvg-green dark:text-nvg-green-light',
+    iconBg: 'bg-nvg-green/15 dark:bg-nvg-green/20',
   },
 ];
 
@@ -70,39 +70,47 @@ export default function Products() {
       <div className="max-w-7xl mx-auto relative z-10">
 
         {/* Header — Awake style: bold text + inline pills */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-nvg-dark dark:text-white leading-tight mb-5">
-            Des produits pensés pour
-          </h2>
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
+        <div className="mb-14 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+          <div>
+            <span className="inline-block rounded-full border border-nvg-orange/20 bg-nvg-orange/10 px-4 py-2 text-sm font-medium text-nvg-orange">
+              Produits & solutions
+            </span>
+            <h2 className="mt-5 max-w-3xl text-3xl font-extrabold leading-tight text-nvg-dark dark:text-white sm:text-4xl lg:text-5xl">
+              Des produits pensés pour l’impact, l’Afrique et l’avenir
+            </h2>
+          </div>
+          <div className="lg:text-right">
+          <div className="mb-6 flex flex-wrap gap-3 lg:justify-end">
             {pills.map((pill) => (
               <span
                 key={pill.label}
-                className={`inline-flex items-center gap-1.5 px-5 py-2 rounded-full border text-sm font-semibold ${pill.color}`}
+                className={`inline-flex items-center gap-2 rounded-full border px-5 py-2 text-sm font-semibold ${pill.color}`}
               >
-                <span className="text-[10px] opacity-60">✦</span>
+                <span className="h-1.5 w-1.5 rounded-full bg-current opacity-60" />
                 {pill.label}
               </span>
             ))}
           </div>
           <Link
             to="/produits"
-            className="inline-flex items-center gap-2 text-nvg-orange font-semibold hover:opacity-80 transition-opacity group"
+            className="inline-flex items-center gap-2 font-semibold text-nvg-orange transition-opacity hover:opacity-80 group"
           >
             Voir le catalogue complet
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
+          </div>
         </div>
 
         {/* Product cards grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {items.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.name}
-                className={`${item.bg} rounded-2xl p-5 flex flex-col gap-4 hover:-translate-y-1 transition-all duration-300 cursor-default`}
+                className={`${item.bg} ${item.text} group relative flex min-h-[158px] cursor-default flex-col justify-between overflow-hidden rounded-2xl border border-black/5 p-5 shadow-[0_18px_50px_-35px_rgba(15,23,42,0.55)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_-38px_rgba(15,23,42,0.7)] dark:border-white/10`}
               >
+                <div className="absolute inset-x-0 top-0 h-1 bg-current opacity-10" />
                 <div className={`w-10 h-10 ${item.iconBg} rounded-xl flex items-center justify-center`}>
                   <Icon className={`w-5 h-5 ${item.text}`} />
                 </div>
