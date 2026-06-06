@@ -14,10 +14,10 @@ const products = [
     specs: ['Panneau solaire intégré', 'Batterie Li-ion rechargeable', 'Autonomie 2h+ de lumière LED', 'Résistant à l\'eau', 'Certifié CE'],
     stat: '38 899',
     statLabel: 'sacs produits',
-    bg: 'bg-amber-100 dark:bg-amber-500/10',
-    text: 'text-amber-800 dark:text-amber-300',
-    iconBg: 'bg-amber-200/70 dark:bg-amber-500/20',
-    badge: 'bg-amber-100 text-amber-700 dark:bg-amber-500/20 dark:text-amber-300',
+    bg: 'bg-nvg-orange/10 dark:bg-nvg-orange/15',
+    text: 'text-nvg-orange dark:text-nvg-orange-light',
+    iconBg: 'bg-nvg-orange/15 dark:bg-nvg-orange/20',
+    badge: 'bg-nvg-orange/10 text-nvg-orange dark:bg-nvg-orange/20 dark:text-nvg-orange-light',
   },
   {
     icon: Shirt,
@@ -27,10 +27,10 @@ const products = [
     specs: ['Tissu kaki certifié', 'Couture locale (Lokossa)', 'Tailles enfants et adultes', 'Lavage facile', 'Durable et résistant'],
     stat: '834',
     statLabel: 'tenues produites',
-    bg: 'bg-blue-100 dark:bg-blue-500/10',
-    text: 'text-blue-800 dark:text-blue-300',
-    iconBg: 'bg-blue-200/70 dark:bg-blue-500/20',
-    badge: 'bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300',
+    bg: 'bg-nvg-blue/10 dark:bg-nvg-blue/15',
+    text: 'text-nvg-blue dark:text-nvg-blue-light',
+    iconBg: 'bg-nvg-blue/15 dark:bg-nvg-blue/25',
+    badge: 'bg-nvg-blue/10 text-nvg-blue dark:bg-nvg-blue/20 dark:text-nvg-blue-light',
   },
   {
     icon: Heart,
@@ -40,10 +40,10 @@ const products = [
     specs: ['Tissu absorbant naturel', 'Réutilisable (lavable)', 'Sans produits chimiques', 'Impact environnemental faible', 'Projet SWEDD / ONU'],
     stat: '631 070',
     statLabel: 'serviettes distribuées',
-    bg: 'bg-rose-100 dark:bg-rose-500/10',
-    text: 'text-rose-800 dark:text-rose-300',
-    iconBg: 'bg-rose-200/70 dark:bg-rose-500/20',
-    badge: 'bg-rose-100 text-rose-700 dark:bg-rose-500/20 dark:text-rose-300',
+    bg: 'bg-nvg-orange/10 dark:bg-nvg-orange/15',
+    text: 'text-nvg-orange dark:text-nvg-orange-light',
+    iconBg: 'bg-nvg-orange/15 dark:bg-nvg-orange/20',
+    badge: 'bg-nvg-orange/10 text-nvg-orange dark:bg-nvg-orange/20 dark:text-nvg-orange-light',
   },
   {
     icon: FlaskConical,
@@ -53,10 +53,10 @@ const products = [
     specs: ['Concentration ≥70% alcool', 'Norme OMS respectée', 'Sans rinçage', 'Formats 100ml à 5L', 'Certifié ANSM équivalent'],
     stat: '100K+',
     statLabel: 'flacons distribués',
-    bg: 'bg-teal-100 dark:bg-teal-500/10',
-    text: 'text-teal-800 dark:text-teal-300',
-    iconBg: 'bg-teal-200/70 dark:bg-teal-500/20',
-    badge: 'bg-teal-100 text-teal-700 dark:bg-teal-500/20 dark:text-teal-300',
+    bg: 'bg-nvg-green/10 dark:bg-nvg-green/15',
+    text: 'text-nvg-green dark:text-nvg-green-light',
+    iconBg: 'bg-nvg-green/15 dark:bg-nvg-green/20',
+    badge: 'bg-nvg-green/10 text-nvg-green dark:bg-nvg-green/20 dark:text-nvg-green-light',
   },
   {
     icon: BookOpen,
@@ -66,10 +66,10 @@ const products = [
     specs: ['Cahiers, stylos, règles', 'Manuel scolaire inclus', 'Trousse complète', 'Adapté par niveau', 'Fourni partout au Bénin'],
     stat: '37 199',
     statLabel: 'trousses livrées',
-    bg: 'bg-violet-100 dark:bg-violet-500/10',
-    text: 'text-violet-800 dark:text-violet-300',
-    iconBg: 'bg-violet-200/70 dark:bg-violet-500/20',
-    badge: 'bg-violet-100 text-violet-700 dark:bg-violet-500/20 dark:text-violet-300',
+    bg: 'bg-nvg-blue/10 dark:bg-nvg-blue/15',
+    text: 'text-nvg-blue dark:text-nvg-blue-light',
+    iconBg: 'bg-nvg-blue/15 dark:bg-nvg-blue/25',
+    badge: 'bg-nvg-blue/10 text-nvg-blue dark:bg-nvg-blue/20 dark:text-nvg-blue-light',
   },
   {
     icon: GraduationCap,
@@ -79,10 +79,10 @@ const products = [
     specs: ['Couture industrielle', 'Informatique bureautique', 'Durée 3 à 6 mois', 'Certificat délivré', '7 402 formés'],
     stat: '7 402',
     statLabel: 'couturiers formés',
-    bg: 'bg-green-100 dark:bg-green-500/10',
-    text: 'text-green-800 dark:text-green-300',
-    iconBg: 'bg-green-200/70 dark:bg-green-500/20',
-    badge: 'bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300',
+    bg: 'bg-nvg-green/10 dark:bg-nvg-green/15',
+    text: 'text-nvg-green dark:text-nvg-green-light',
+    iconBg: 'bg-nvg-green/15 dark:bg-nvg-green/20',
+    badge: 'bg-nvg-green/10 text-nvg-green dark:bg-nvg-green/20 dark:text-nvg-green-light',
   },
   {
     icon: Sprout,
@@ -92,10 +92,10 @@ const products = [
     specs: ['Semences certifiées', 'Engrais biologiques', 'Phytosanitaires homologués', 'Conseil agronomique', 'Livraison terrain'],
     stat: '3 000',
     statLabel: 'machines distribuées',
-    bg: 'bg-lime-100 dark:bg-lime-500/10',
-    text: 'text-lime-800 dark:text-lime-300',
-    iconBg: 'bg-lime-200/70 dark:bg-lime-500/20',
-    badge: 'bg-lime-100 text-lime-700 dark:bg-lime-500/20 dark:text-lime-300',
+    bg: 'bg-nvg-green/10 dark:bg-nvg-green/15',
+    text: 'text-nvg-green dark:text-nvg-green-light',
+    iconBg: 'bg-nvg-green/15 dark:bg-nvg-green/20',
+    badge: 'bg-nvg-green/10 text-nvg-green dark:bg-nvg-green/20 dark:text-nvg-green-light',
   },
   {
     icon: Laptop,
@@ -105,10 +105,10 @@ const products = [
     specs: ['Ordinateurs & tablettes', 'Vidéoprojecteurs', 'Réseaux informatiques', 'Installation comprise', 'Support technique'],
     stat: '120',
     statLabel: 'conteneurs / an',
-    bg: 'bg-sky-100 dark:bg-sky-500/10',
-    text: 'text-sky-800 dark:text-sky-300',
-    iconBg: 'bg-sky-200/70 dark:bg-sky-500/20',
-    badge: 'bg-sky-100 text-sky-700 dark:bg-sky-500/20 dark:text-sky-300',
+    bg: 'bg-nvg-blue/10 dark:bg-nvg-blue/15',
+    text: 'text-nvg-blue dark:text-nvg-blue-light',
+    iconBg: 'bg-nvg-blue/15 dark:bg-nvg-blue/25',
+    badge: 'bg-nvg-blue/10 text-nvg-blue dark:bg-nvg-blue/20 dark:text-nvg-blue-light',
   },
 ];
 
@@ -133,7 +133,7 @@ export default function ProduitsPage() {
           <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-nvg-orange/10 rounded-full blur-[100px]" />
           <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-nvg-blue/15 rounded-full blur-[80px]" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-16 lg:px-24">
           <Link to="/" className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors text-sm mb-8 group">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Retour à l'accueil
@@ -157,7 +157,7 @@ export default function ProduitsPage() {
       </div>
 
       {/* Filters + Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 py-16">
 
         {/* Category Filters */}
         <div className="flex flex-wrap gap-3 mb-12">
@@ -183,7 +183,7 @@ export default function ProduitsPage() {
             return (
               <div
                 key={product.name}
-                className={`${product.bg} rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300`}
+                className={`${product.bg} rounded-2xl border border-black/5 p-6 shadow-[0_20px_55px_-38px_rgba(15,23,42,0.55)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_65px_-42px_rgba(15,23,42,0.72)] dark:border-white/10`}
               >
                 <div className={`w-12 h-12 ${product.iconBg} rounded-xl flex items-center justify-center mb-4`}>
                   <Icon className={`w-6 h-6 ${product.text}`} />

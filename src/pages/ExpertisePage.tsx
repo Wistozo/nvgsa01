@@ -152,7 +152,7 @@ export default function ExpertisePage() {
           <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-nvg-orange/15 rounded-full blur-[100px]" />
           <div className="absolute top-1/2 left-0 w-[200px] h-[200px] bg-nvg-green/10 rounded-full blur-[80px]" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-16 lg:px-24">
           <Link to="/" className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors text-sm mb-8 group">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Retour à l'accueil
@@ -176,7 +176,7 @@ export default function ExpertisePage() {
       </div>
 
       {/* Expertise Areas */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 py-20">
         <div className="space-y-16">
           {expertiseAreas.map((area, index) => {
             const Icon = area.icon;
@@ -240,7 +240,7 @@ export default function ExpertisePage() {
 
       {/* Produits phares */}
       <div className="bg-nvg-dark py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24">
           <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
               Nos Produits <span className="text-nvg-orange">Phares</span>
@@ -276,7 +276,7 @@ export default function ExpertisePage() {
       </div>
 
       {/* CTA */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 py-20">
         <div className="bg-gradient-to-r from-nvg-dark via-nvg-blue to-nvg-blue-light rounded-3xl p-6 sm:p-10 lg:p-16 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-nvg-orange/20 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-nvg-green/20 rounded-full blur-3xl" />

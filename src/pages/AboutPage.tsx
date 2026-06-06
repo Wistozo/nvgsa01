@@ -49,7 +49,7 @@ export default function AboutPage() {
           <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-nvg-green/15 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-nvg-orange/10 rounded-full blur-[100px]" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-16 lg:px-24">
           <Link to="/" className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors text-sm mb-8 group">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Retour à l'accueil
@@ -73,7 +73,7 @@ export default function AboutPage() {
       </div>
 
       {/* Mission & Vision */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 py-20">
         <div className="grid md:grid-cols-2 gap-8 mb-20">
           <div className="glass-card glow-green p-6 sm:p-10">
             <div className="w-14 h-14 bg-nvg-green rounded-2xl flex items-center justify-center mb-6">

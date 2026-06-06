@@ -123,7 +123,7 @@ export default function ZonesPage() {
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-nvg-green/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-nvg-blue/15 rounded-full blur-[100px]" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-16 lg:px-24">
           <Link to="/" className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors text-sm mb-8 group">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Retour à l'accueil
@@ -161,7 +161,7 @@ export default function ZonesPage() {
       </div>
 
       {/* Countries grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 py-16">
         <h2 className="text-2xl font-extrabold text-white mb-8">
           Pays d'intervention <span className="text-nvg-green">({countries.length})</span>
         </h2>
