@@ -196,8 +196,8 @@ export default function Footer() {
             <p className="text-white/45 text-sm text-center md:text-left">
               © {new Date().getFullYear()} New Vision Group SA. Tous droits réservés.
             </p>
-            <p className="text-white/35 text-sm flex items-center gap-1">
-              Fait avec <Heart className="w-4 h-4 text-nvg-orange fill-nvg-orange" /> au Bénin
+            <p className="text-white/35 text-sm flex items-center gap-2">
+              Fait avec <Heart className="w-3.5 h-3.5 text-nvg-orange fill-nvg-orange" /> en Afrique
             </p>
             <button
               onClick={scrollToTop}
