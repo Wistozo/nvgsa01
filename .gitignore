@@ -2,3 +2,16 @@ node_modules/
 dist/
 .env
 *.local
+*.tsbuildinfo
+vite-dev*.log
+
+# Backups & archives de travail
+backup_before_revamp/
+backup_before_kimi_revamp/
+asset-cleanup-reports/
+assets/
+NVG-SA-dist.zip
+NVG-SA-Maquette.pdf
+styles.css
+info.md
+AGENTS.md
