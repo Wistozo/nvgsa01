@@ -7,7 +7,7 @@ export const translations = {
       zones: 'Zones',
       partners: 'Partenaires',
       contact: 'Contact',
-      capital: 'Capital social : 25 000 000 FCFA'
+      capital: 'Capital social : 100 000 000 FCFA'
     },
     hero: {
       badge: 'Groupe sous-régional reconnu depuis 2008',

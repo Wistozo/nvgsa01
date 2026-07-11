@@ -1,14 +1,21 @@
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Globe,
-  Facebook,
-  Linkedin,
-  ArrowUp,
-  Heart
-} from 'lucide-react';
+import { MapPin, Phone, Mail, Globe, ArrowUp, Heart } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+
+function IconFacebook() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    </svg>
+  );
+}
+function IconLinkedin() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
+      <circle cx="4" cy="4" r="2"/>
+    </svg>
+  );
+}
 export default function Footer() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -46,8 +53,8 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: 'https://www.facebook.com/newvisiongroupsa', label: 'Facebook' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/new-vision-group-sa', label: 'LinkedIn' },
+    { icon: IconFacebook, href: 'https://www.facebook.com/newvisiongroupsa', label: 'Facebook' },
+    { icon: IconLinkedin, href: 'https://www.linkedin.com/company/new-vision-group-sa', label: 'LinkedIn' },
   ];
 
   return (
@@ -74,7 +81,7 @@ export default function Footer() {
             </p>
             <div className="inline-block px-4 py-2 bg-nvg-blue/20 rounded-lg">
               <span className="text-nvg-orange font-semibold">Capital social:</span>
-              <span className="text-white ml-2">25 000 000 FCFA</span>
+              <span className="text-white ml-2">100 000 000 FCFA</span>
             </div>
           </div>
 
@@ -173,7 +180,7 @@ export default function Footer() {
                     aria-label={social.label}
                     className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-nvg-orange transition-colors"
                   >
-                    <social.icon className="w-5 h-5" />
+                    <social.icon />
                   </a>
                 ))}
               </div>
