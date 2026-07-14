@@ -40,7 +40,7 @@ export default function AboutPage() {
       <Helmet>
         <title>À propos de NVG — Histoire, Mission & Valeurs | New Vision Group SA</title>
         <meta name="description" content="Découvrez l'histoire de New Vision Group SA depuis 2008 : notre mission, nos valeurs, notre parcours de 18 ans au service du Bénin et de l'Afrique de l'Ouest." />
-        <link rel="canonical" href="https://www.newvisiongroupsa.bj/a-propos" />
+        <link rel="canonical" href="https://nvg.bj/a-propos" />
       </Helmet>
 
       {/* Page Hero */}

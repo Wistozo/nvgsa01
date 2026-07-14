@@ -142,7 +142,7 @@ export default function ExpertisePage() {
       <Helmet>
         <title>Nos Expertises — Production, Fourniture, Import-Export & Agriculture | NVG SA</title>
         <meta name="description" content="NVG intervient dans 4 domaines : production industrielle (sacs solaires LIGHT-TC), fourniture d'équipements, import-export, et intrants agricoles au Bénin et en Afrique de l'Ouest." />
-        <link rel="canonical" href="https://www.newvisiongroupsa.bj/expertises" />
+        <link rel="canonical" href="https://nvg.bj/expertises" />
       </Helmet>
 
       {/* Page Hero */}

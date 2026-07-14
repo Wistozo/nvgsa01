@@ -14,7 +14,7 @@ export default function HomePage() {
       <Helmet>
         <title>New Vision Group SA — Groupe sous-régional reconnu depuis 2008</title>
         <meta name="description" content="New Vision Group SA : sacs scolaires solaires LIGHT-TC, serviettes hygiéniques, fournitures scolaires, import-export. 300+ collaborateurs, 6 pays d'Afrique de l'Ouest." />
-        <link rel="canonical" href="https://www.newvisiongroupsa.bj/" />
+        <link rel="canonical" href="https://nvg.bj/" />
       </Helmet>
       <Hero />
       <Stats />

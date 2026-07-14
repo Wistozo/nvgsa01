@@ -85,7 +85,7 @@ export default function Contact() {
     },
     {
       num: '04', icon: Globe, title: t.contact.labels.web,
-      lines: ['www.newvisiongroupsa.bj'],
+      lines: ['nvg.bj'],
       color: 'text-nvg-blue', dot: 'bg-nvg-blue'
     },
   ];

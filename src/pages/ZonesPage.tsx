@@ -114,7 +114,7 @@ export default function ZonesPage() {
       <Helmet>
         <title>Zones d'Intervention — 6 pays d'Afrique de l'Ouest | New Vision Group SA</title>
         <meta name="description" content="NVG est présent dans 6 pays : Bénin (siège), Côte d'Ivoire, Togo, Burkina Faso, Cameroun et Niger. Découvrez nos bureaux et zones d'intervention en Afrique de l'Ouest." />
-        <link rel="canonical" href="https://www.newvisiongroupsa.bj/zones" />
+        <link rel="canonical" href="https://nvg.bj/zones" />
       </Helmet>
 
       {/* Page Hero */}

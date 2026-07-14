@@ -124,7 +124,7 @@ export default function ProduitsPage() {
       <Helmet>
         <title>Nos Produits — Sacs solaires, Tenues scolaires, Kits & plus | NVG SA</title>
         <meta name="description" content="Catalogue complet des produits NVG : sacs scolaires solaires LIGHT-TC, tenues scolaires, serviettes hygiéniques réutilisables, gels biomédicaux, kits scolaires et intrants agricoles." />
-        <link rel="canonical" href="https://www.newvisiongroupsa.bj/produits" />
+        <link rel="canonical" href="https://nvg.bj/produits" />
       </Helmet>
 
       {/* Page Hero */}
