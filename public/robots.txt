@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.newvisiongroupsa.bj/sitemap.xml
+Sitemap: https://nvg.bj/sitemap.xml
