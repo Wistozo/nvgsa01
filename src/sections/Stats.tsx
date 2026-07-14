@@ -44,7 +44,12 @@ function Counter({ target, suffix = '' }: { target: number; suffix?: string }) {
     return () => cancelAnimationFrame(raf);
   }, [inView, target]);
 
-  return <span ref={ref}>{count.toLocaleString('fr-FR')}{suffix}</span>;
+  return (
+    <span ref={ref}>
+      <span aria-hidden="true">{count.toLocaleString('fr-FR')}{suffix}</span>
+      <span className="sr-only">{target.toLocaleString('fr-FR')}{suffix}</span>
+    </span>
+  );
 }
 
 const stats = [

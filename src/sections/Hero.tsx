@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 const impactStats = [
@@ -12,6 +13,8 @@ export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+
+  const navigate = useNavigate();
 
   const scrollTo = (href: string) => {
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
@@ -118,12 +121,12 @@ export default function Hero() {
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button
-              onClick={() => scrollTo('#contact')}
+              onClick={() => navigate('/produits')}
               variant="outline"
               size="lg"
               className="rounded-full border-2 border-white/35 bg-white/10 px-7 py-6 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-nvg-dark"
             >
-              Nous contacter
+              Voir nos produits
             </Button>
           </div>
         </div>

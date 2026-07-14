@@ -152,7 +152,7 @@ export default function Navigation() {
           </div>
           <div className="flex items-center gap-4">
             <span className="text-xs text-nvg-orange font-medium hidden sm:block">
-              {t.nav?.capital ?? 'Capital social : 25 000 000 FCFA'}
+              {t.nav?.capital ?? 'Capital social : 100 000 000 FCFA'}
             </span>
             <button onClick={toggleLanguage} className="text-xs font-semibold bg-white/10 px-3 py-1 rounded hover:bg-white/20 transition-colors">
               {language.toUpperCase()}
