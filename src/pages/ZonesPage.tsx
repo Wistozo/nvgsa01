@@ -1,114 +1,137 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, MapPin, Phone, Mail, Globe } from 'lucide-react';
-
-const countries = [
-  {
-    name: 'Bénin',
-    code: 'BJ',
-    isHQ: true,
-    capital: 'Cotonou',
-    role: 'Siège social & Unité industrielle',
-    details: 'Quartier général du groupe depuis 2008. Unité de production à Lokossa (Mono), agréée Catégorie B.',
-    phone: '+229 01 90 94 52 55',
-    email: 'info@newvisiongroupsa.bj',
-    address: 'Cotonou, Gbedjromèdé 16 Ampoules',
-    accent: 'border-nvg-orange bg-nvg-orange/10',
-    badge: 'bg-nvg-orange text-white',
-    dot: 'bg-nvg-orange',
-  },
-  {
-    name: "Côte d'Ivoire",
-    code: 'CI',
-    isHQ: false,
-    capital: 'Abidjan',
-    role: 'Bureau de représentation',
-    details: 'Présence commerciale pour les marchés ivoiriens et francophones d\'Afrique de l\'Ouest.',
-    phone: '+225 XX XX XX XX',
-    email: 'ci@newvisiongroupsa.bj',
-    address: 'Abidjan, Plateau',
-    accent: 'border-white/10 bg-white/5 dark:bg-white/5',
-    badge: 'bg-nvg-blue text-white',
-    dot: 'bg-nvg-blue-light',
-  },
-  {
-    name: 'Togo',
-    code: 'TG',
-    isHQ: false,
-    capital: 'Lomé',
-    role: 'Bureau de représentation',
-    details: 'Partenariats institutionnels et fourniture d\'équipements au secteur éducatif togolais.',
-    phone: '+228 XX XX XX XX',
-    email: 'tg@newvisiongroupsa.bj',
-    address: 'Lomé, Centre',
-    accent: 'border-white/10 bg-white/5 dark:bg-white/5',
-    badge: 'bg-nvg-blue text-white',
-    dot: 'bg-nvg-blue-light',
-  },
-  {
-    name: 'Burkina Faso',
-    code: 'BF',
-    isHQ: false,
-    capital: 'Ouagadougou',
-    role: 'Partenaire commercial',
-    details: 'Distribution de sacs solaires LIGHT-TC et fournitures scolaires dans les zones rurales.',
-    phone: '+226 XX XX XX XX',
-    email: 'bf@newvisiongroupsa.bj',
-    address: 'Ouagadougou',
-    accent: 'border-white/10 bg-white/5 dark:bg-white/5',
-    badge: 'bg-nvg-blue text-white',
-    dot: 'bg-nvg-blue-light',
-  },
-  {
-    name: 'Cameroun',
-    code: 'CM',
-    isHQ: false,
-    capital: 'Yaoundé',
-    role: 'Partenaire commercial',
-    details: 'Opérations d\'import-export et fourniture d\'équipements institutionnels.',
-    phone: '+237 XX XX XX XX',
-    email: 'cm@newvisiongroupsa.bj',
-    address: 'Yaoundé',
-    accent: 'border-white/10 bg-white/5 dark:bg-white/5',
-    badge: 'bg-nvg-blue text-white',
-    dot: 'bg-nvg-blue-light',
-  },
-  {
-    name: 'Niger',
-    code: 'NE',
-    isHQ: false,
-    capital: 'Niamey',
-    role: 'Partenaire commercial',
-    details: 'Distribution de produits agricoles et fournitures scolaires en partenariat avec des ONG locales.',
-    phone: '+227 XX XX XX XX',
-    email: 'ne@newvisiongroupsa.bj',
-    address: 'Niamey',
-    accent: 'border-white/10 bg-white/5 dark:bg-white/5',
-    badge: 'bg-nvg-blue text-white',
-    dot: 'bg-nvg-blue-light',
-  },
-];
-
-const offices = [
-  {
-    type: 'Siège Social',
-    address: 'Cotonou, Gbedjromèdé 16 Ampoules, Bénin',
-    phone: '+229 01 90 94 52 55',
-    email: 'info@newvisiongroupsa.bj',
-    color: 'border-nvg-orange/30 bg-nvg-orange/5',
-    iconColor: 'text-nvg-orange',
-  },
-  {
-    type: 'Unité Industrielle',
-    address: 'Lokossa, Mono, Bénin',
-    phone: '+229 01 94 74 74 11',
-    email: 's.client@newvisiongroupsa.bj',
-    color: 'border-nvg-green/30 bg-nvg-green/5',
-    iconColor: 'text-nvg-green',
-  },
-];
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function ZonesPage() {
+  const { t, language } = useTranslation();
+  const p = t.pages.zones;
+  const l = (fr: string, en: string) => language === 'en' ? en : fr;
+
+  const countries = [
+    {
+      name: 'Bénin',
+      code: 'BJ',
+      isHQ: true,
+      capital: 'Cotonou',
+      role: l('Siège social & Unité industrielle', 'Headquarters & Industrial unit'),
+      details: l(
+        'Quartier général du groupe depuis 2008. Unité de production à Lokossa (Mono), agréée Catégorie B.',
+        'Group headquarters since 2008. Production unit in Lokossa (Mono), Category B approved.'
+      ),
+      phone: '+229 01 90 94 52 55',
+      email: 'info@newvisiongroupsa.bj',
+      address: 'Cotonou, Gbedjromèdé 16 Ampoules',
+      accent: 'border-nvg-orange bg-nvg-orange/10',
+      badge: 'bg-nvg-orange text-white',
+      dot: 'bg-nvg-orange',
+    },
+    {
+      name: "Côte d'Ivoire",
+      code: 'CI',
+      isHQ: false,
+      capital: 'Abidjan',
+      role: l('Bureau de représentation', 'Representative office'),
+      details: l(
+        "Présence commerciale pour les marchés ivoiriens et francophones d'Afrique de l'Ouest.",
+        'Commercial presence for Ivorian and French-speaking West African markets.'
+      ),
+      phone: '+225 XX XX XX XX',
+      email: 'ci@newvisiongroupsa.bj',
+      address: 'Abidjan, Plateau',
+      accent: 'border-white/10 bg-white/5 dark:bg-white/5',
+      badge: 'bg-nvg-blue text-white',
+      dot: 'bg-nvg-blue-light',
+    },
+    {
+      name: 'Togo',
+      code: 'TG',
+      isHQ: false,
+      capital: 'Lomé',
+      role: l('Bureau de représentation', 'Representative office'),
+      details: l(
+        "Partenariats institutionnels et fourniture d'équipements au secteur éducatif togolais.",
+        'Institutional partnerships and supply of equipment to the Togolese education sector.'
+      ),
+      phone: '+228 XX XX XX XX',
+      email: 'tg@newvisiongroupsa.bj',
+      address: 'Lomé, Centre',
+      accent: 'border-white/10 bg-white/5 dark:bg-white/5',
+      badge: 'bg-nvg-blue text-white',
+      dot: 'bg-nvg-blue-light',
+    },
+    {
+      name: 'Burkina Faso',
+      code: 'BF',
+      isHQ: false,
+      capital: 'Ouagadougou',
+      role: l('Partenaire commercial', 'Commercial partner'),
+      details: l(
+        'Distribution de sacs solaires LIGHT-TC et fournitures scolaires dans les zones rurales.',
+        'Distribution of LIGHT-TC solar bags and school supplies in rural areas.'
+      ),
+      phone: '+226 XX XX XX XX',
+      email: 'bf@newvisiongroupsa.bj',
+      address: 'Ouagadougou',
+      accent: 'border-white/10 bg-white/5 dark:bg-white/5',
+      badge: 'bg-nvg-blue text-white',
+      dot: 'bg-nvg-blue-light',
+    },
+    {
+      name: 'Cameroun',
+      code: 'CM',
+      isHQ: false,
+      capital: 'Yaoundé',
+      role: l('Partenaire commercial', 'Commercial partner'),
+      details: l(
+        "Opérations d'import-export et fourniture d'équipements institutionnels.",
+        'Import-export operations and supply of institutional equipment.'
+      ),
+      phone: '+237 XX XX XX XX',
+      email: 'cm@newvisiongroupsa.bj',
+      address: 'Yaoundé',
+      accent: 'border-white/10 bg-white/5 dark:bg-white/5',
+      badge: 'bg-nvg-blue text-white',
+      dot: 'bg-nvg-blue-light',
+    },
+    {
+      name: 'Niger',
+      code: 'NE',
+      isHQ: false,
+      capital: 'Niamey',
+      role: l('Partenaire commercial', 'Commercial partner'),
+      details: l(
+        'Distribution de produits agricoles et fournitures scolaires en partenariat avec des ONG locales.',
+        'Distribution of agricultural products and school supplies in partnership with local NGOs.'
+      ),
+      phone: '+227 XX XX XX XX',
+      email: 'ne@newvisiongroupsa.bj',
+      address: 'Niamey',
+      accent: 'border-white/10 bg-white/5 dark:bg-white/5',
+      badge: 'bg-nvg-blue text-white',
+      dot: 'bg-nvg-blue-light',
+    },
+  ];
+
+  const offices = [
+    {
+      type: l('Siège Social', 'Headquarters'),
+      address: 'Cotonou, Gbedjromèdé 16 Ampoules, Bénin',
+      phone: '+229 01 90 94 52 55',
+      email: 'info@newvisiongroupsa.bj',
+      color: 'border-nvg-orange/30 bg-nvg-orange/5',
+      iconColor: 'text-nvg-orange',
+    },
+    {
+      type: l('Unité Industrielle', 'Industrial Unit'),
+      address: 'Lokossa, Mono, Bénin',
+      phone: '+229 01 94 74 74 11',
+      email: 's.client@newvisiongroupsa.bj',
+      color: 'border-nvg-green/30 bg-nvg-green/5',
+      iconColor: 'text-nvg-green',
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-nvg-dark transition-colors duration-300">
       <Helmet>
@@ -126,31 +149,27 @@ export default function ZonesPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-16 lg:px-24">
           <Link to="/" className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors text-sm mb-8 group">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            Retour à l'accueil
+            {t.pages.backLink}
           </Link>
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-2 bg-nvg-green/20 text-nvg-green rounded-full text-sm font-medium mb-6 border border-nvg-green/30">
-              Présence Régionale
+              {p.badge}
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-              Nos Zones{' '}
+              {p.heroTitle.split(' ').slice(0, -1).join(' ')}{' '}
               <span className="relative inline-block">
-                <span className="relative z-10 bg-nvg-green text-white px-4 py-1 rounded-xl">d'Intervention.</span>
+                <span className="relative z-10 bg-nvg-green text-white px-4 py-1 rounded-xl">{p.heroTitle.split(' ').slice(-1)}</span>
                 <span className="absolute inset-0 bg-nvg-green rounded-xl blur-xl opacity-30 scale-110" />
               </span>
             </h1>
             <p className="text-lg text-white/60 leading-relaxed max-w-2xl">
-              De Cotonou à Abidjan, de Lomé à Ouagadougou — NVG étend son impact sur 6 pays d'Afrique de l'Ouest avec une organisation locale adaptée à chaque marché.
+              {p.heroDesc}
             </p>
           </div>
 
           {/* Quick stats */}
           <div className="flex flex-wrap gap-8 mt-12">
-            {[
-              { value: '6', label: 'Pays couverts', color: 'text-nvg-green' },
-              { value: '1', label: 'Siège + unité de production', color: 'text-nvg-orange' },
-              { value: '300+', label: 'Collaborateurs régionaux', color: 'text-nvg-blue-light' },
-            ].map((s) => (
+            {p.quickStats.map((s) => (
               <div key={s.label}>
                 <div className={`text-3xl font-extrabold ${s.color}`}>{s.value}</div>
                 <div className="text-xs text-white/40 uppercase tracking-widest font-medium mt-1">{s.label}</div>
@@ -163,7 +182,7 @@ export default function ZonesPage() {
       {/* Countries grid */}
       <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 py-16">
         <h2 className="text-2xl font-extrabold text-white mb-8">
-          Pays d'intervention <span className="text-nvg-green">({countries.length})</span>
+          {p.countriesTitle} <span className="text-nvg-green">({countries.length})</span>
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
           {countries.map((country, index) => (
@@ -183,7 +202,7 @@ export default function ZonesPage() {
                 </div>
                 {country.isHQ && (
                   <span className="text-[10px] bg-nvg-orange text-white px-2 py-1 rounded-full font-semibold uppercase tracking-wider">
-                    Siège
+                    {p.hqBadge}
                   </span>
                 )}
               </div>
@@ -196,7 +215,7 @@ export default function ZonesPage() {
                 {country.phone.includes('XX') ? (
                   <a href="tel:+22901909452 55" className="flex items-center gap-2 text-xs text-white/30 hover:text-nvg-orange transition-colors">
                     <Phone className="w-3.5 h-3.5 flex-shrink-0" />
-                    Via siège : +229 01 90 94 52 55
+                    {p.viaHQ} +229 01 90 94 52 55
                   </a>
                 ) : (
                   <a href={`tel:${country.phone}`} className="flex items-center gap-2 text-xs text-nvg-orange hover:text-nvg-orange-light transition-colors">
@@ -220,7 +239,7 @@ export default function ZonesPage() {
         {/* Offices */}
         <div className="mb-20">
           <h2 className="text-2xl font-extrabold text-white mb-8">
-            Nos <span className="text-nvg-orange">Adresses</span>
+            {p.addressesTitle.split(' ')[0]} <span className="text-nvg-orange">{p.addressesTitle.split(' ').slice(1).join(' ')}</span>
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {offices.map((office, i) => (
@@ -250,15 +269,13 @@ export default function ZonesPage() {
 
         {/* CTA */}
         <div className="text-center py-10">
-          <h2 className="text-2xl font-extrabold text-white mb-4">
-            Vous êtes dans l'un de ces pays ?
-          </h2>
-          <p className="text-white/50 mb-8">Contactez-nous pour discuter de vos besoins locaux.</p>
+          <h2 className="text-2xl font-extrabold text-white mb-4">{p.ctaTitle}</h2>
+          <p className="text-white/50 mb-8">{p.ctaSubtitle}</p>
           <Link
             to="/#contact"
             className="inline-flex items-center gap-2 bg-nvg-orange hover:bg-nvg-orange-light text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 group"
           >
-            Nous écrire
+            {p.ctaButton}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

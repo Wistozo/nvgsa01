@@ -2,18 +2,14 @@ import { useEffect, useRef } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-
-const impactStats = [
-  { value: '38 899', label: 'sacs solaires LIGHT-TC' },
-  { value: '6', label: 'pays de présence' },
-  { value: '300+', label: 'collaborateurs' },
-];
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const scrollTo = (href: string) => {
@@ -64,7 +60,7 @@ export default function Hero() {
       >
         <img
           src="/hero-bg.jpg"
-          alt="Unité de production NVG"
+          alt={t.hero.imageAlt}
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(15,23,42,0.92)_0%,rgba(15,23,42,0.76)_42%,rgba(15,23,42,0.34)_100%)]" />
@@ -85,7 +81,7 @@ export default function Hero() {
           >
             <span className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white/80 backdrop-blur-md">
               <span className="h-2 w-2 rounded-full bg-nvg-green" />
-              Groupe industriel béninois depuis 2008
+              {t.hero.badge}
             </span>
           </div>
 
@@ -103,8 +99,7 @@ export default function Hero() {
             style={{ animationDelay: '0.24s', animationFillMode: 'both' }}
           >
             <p className="max-w-2xl text-xl leading-relaxed text-white/75 sm:text-2xl">
-              Industrie, fourniture institutionnelle et innovation solaire au service
-              du développement économique et social en Afrique.
+              {t.hero.description}
             </p>
           </div>
 
@@ -117,7 +112,7 @@ export default function Hero() {
               size="lg"
               className="group rounded-full bg-nvg-orange px-7 py-6 text-base font-semibold text-white shadow-[0_18px_45px_-18px_rgba(249,115,22,0.8)] transition-all duration-300 hover:bg-nvg-orange-light"
             >
-              Découvrir NVG
+              {t.hero.cta1}
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button
@@ -126,7 +121,7 @@ export default function Hero() {
               size="lg"
               className="rounded-full border-2 border-white/35 bg-white/10 px-7 py-6 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-nvg-dark"
             >
-              Voir nos produits
+              {t.hero.cta2}
             </Button>
           </div>
         </div>
@@ -135,7 +130,7 @@ export default function Hero() {
           className="animate-slide-up mt-16 grid max-w-4xl gap-3 sm:grid-cols-3"
           style={{ animationDelay: '0.48s', animationFillMode: 'both' }}
         >
-          {impactStats.map((stat) => (
+          {t.hero.impactStats.map((stat) => (
             <div
               key={stat.label}
               className="rounded-2xl border border-white/12 bg-white/[0.08] px-5 py-4 backdrop-blur-md"
@@ -154,7 +149,7 @@ export default function Hero() {
         className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-1 text-white/45 transition-colors hover:text-white/75 lg:left-auto lg:right-24 lg:translate-x-0"
         aria-label="Défiler vers la section suivante"
       >
-        <span className="text-[10px] font-medium uppercase tracking-[0.24em]">Découvrir</span>
+        <span className="text-[10px] font-medium uppercase tracking-[0.24em]">{t.hero.scrollText}</span>
         <ChevronDown className="h-4 w-4 animate-bounce" />
       </button>
 

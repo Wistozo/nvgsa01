@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Sun, Users, Globe, Calendar } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 // Back.out spring ease
 const c1 = 1.70158;
@@ -52,54 +53,14 @@ function Counter({ target, suffix = '' }: { target: number; suffix?: string }) {
   );
 }
 
-const stats = [
-  {
-    icon: Sun,
-    value: 38899,
-    suffix: '',
-    label: 'Sacs solaires distribués',
-    sub: 'Technologie LIGHT-TC',
-    iconColor: 'text-nvg-orange',
-    accentColor: '#f97316',
-    span: 'col-span-12 lg:col-span-8',
-    large: true,
-  },
-  {
-    icon: Users,
-    value: 300,
-    suffix: '+',
-    label: 'Collaborateurs',
-    sub: 'Équipe pluridisciplinaire',
-    iconColor: 'text-nvg-green',
-    accentColor: '#16a34a',
-    span: 'col-span-12 lg:col-span-4',
-    large: false,
-  },
-  {
-    icon: Globe,
-    value: 6,
-    suffix: '',
-    label: 'Pays couverts',
-    sub: 'Afrique de l\'Ouest',
-    iconColor: 'text-nvg-blue-light',
-    accentColor: '#2563eb',
-    span: 'col-span-12 lg:col-span-4',
-    large: false,
-  },
-  {
-    icon: Calendar,
-    value: 2008,
-    suffix: '',
-    label: 'Année de fondation',
-    sub: 'Plus de 15 ans d\'impact',
-    iconColor: 'text-nvg-green',
-    accentColor: '#16a34a',
-    span: 'col-span-12 lg:col-span-8',
-    large: true,
-  },
+const STATS_CONFIG = [
+  { icon: Sun,      value: 38899, suffix: '',  iconColor: 'text-nvg-orange',     accentColor: '#f97316', span: 'col-span-12 lg:col-span-8', large: true  },
+  { icon: Users,    value: 300,   suffix: '+', iconColor: 'text-nvg-green',      accentColor: '#16a34a', span: 'col-span-12 lg:col-span-4', large: false },
+  { icon: Globe,    value: 6,     suffix: '',  iconColor: 'text-nvg-blue-light', accentColor: '#2563eb', span: 'col-span-12 lg:col-span-4', large: false },
+  { icon: Calendar, value: 2008,  suffix: '',  iconColor: 'text-nvg-green',      accentColor: '#16a34a', span: 'col-span-12 lg:col-span-8', large: true  },
 ];
 
-type StatItem = (typeof stats)[number];
+type StatItem = (typeof STATS_CONFIG)[number] & { label: string; sub: string };
 
 function StatCard({ stat, index }: { stat: StatItem; index: number }) {
   const { ref, handleMove, handleLeave } = useTilt();
@@ -160,6 +121,9 @@ function StatCard({ stat, index }: { stat: StatItem; index: number }) {
 }
 
 export default function Stats() {
+  const { t } = useTranslation();
+  const stats: StatItem[] = STATS_CONFIG.map((cfg, i) => ({ ...cfg, ...t.stats.items[i] }));
+
   return (
     <section className="relative py-24 bg-nvg-dark overflow-hidden">
 
@@ -181,7 +145,7 @@ export default function Stats() {
         >
           <span className="inline-flex items-center gap-2 text-white/30 text-xs tracking-[0.3em] uppercase font-medium">
             <span className="w-8 h-px bg-nvg-orange/60" />
-            New Vision Group en chiffres
+            {t.stats.eyebrow}
             <span className="w-8 h-px bg-nvg-orange/60" />
           </span>
         </motion.div>

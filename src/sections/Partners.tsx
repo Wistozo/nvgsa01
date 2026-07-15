@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const row1 = [
   { name: 'SWEDD Bénin',        logo: '/logos/swedd.png'             },
@@ -35,6 +36,7 @@ function LogoCard({ name, logo }: { name: string; logo: string }) {
 }
 
 export default function Partners() {
+  const { t } = useTranslation();
   return (
     <section id="partners" className="relative py-20 bg-white dark:bg-nvg-dark transition-colors duration-300 overflow-hidden">
 
@@ -48,11 +50,11 @@ export default function Partners() {
       >
         <span className="inline-flex items-center gap-2 text-white/30 dark:text-nvg-gray/60 text-xs tracking-[0.3em] uppercase font-medium mb-4">
           <span className="w-8 h-px bg-nvg-orange/40 inline-block" />
-          <span className="text-nvg-gray dark:text-white/30">Ils nous font confiance</span>
+          <span className="text-nvg-gray dark:text-white/30">{t.partners.eyebrow}</span>
           <span className="w-8 h-px bg-nvg-orange/40 inline-block" />
         </span>
         <h2 className="text-3xl sm:text-4xl font-bold text-nvg-dark dark:text-white">
-          Nos <span className="text-nvg-orange">Partenaires</span>
+          {t.partners.title} <span className="text-nvg-orange">{t.partners.titleHighlight}</span>
         </h2>
       </motion.div>
 

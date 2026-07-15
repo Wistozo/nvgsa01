@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Globe, ArrowUp, Heart } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useTranslation } from '@/hooks/useTranslation';
 
 function IconFacebook() {
   return (
@@ -16,10 +17,12 @@ function IconLinkedin() {
     </svg>
   );
 }
+
 export default function Footer() {
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === '/';
+  const { t } = useTranslation();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -35,21 +38,12 @@ export default function Footer() {
   };
 
   const quickLinks = [
-    { label: 'Accueil',        type: 'page',   href: '/'           },
-    { label: 'À propos',       type: 'page',   href: '/a-propos'   },
-    { label: 'Nos Expertises', type: 'page',   href: '/expertises' },
-    { label: 'Zones',          type: 'page',   href: '/zones'      },
-    { label: 'Partenaires',    type: 'anchor', href: '#partners'   },
-    { label: 'Contact',        type: 'anchor', href: '#contact'    },
-  ];
-
-  const services = [
-    'Sacs Solaires LIGHT-TC',
-    'Serviettes Hygiéniques',
-    'Tenues Scolaires',
-    'Fournitures Scolaires',
-    'Équipements Médicaux',
-    'Intrants Agricoles'
+    { label: t.nav.home,       type: 'page',   href: '/'           },
+    { label: t.nav.about,      type: 'page',   href: '/a-propos'   },
+    { label: t.nav.expertise,  type: 'page',   href: '/expertises' },
+    { label: t.nav.zones,      type: 'page',   href: '/zones'      },
+    { label: t.nav.partners,   type: 'anchor', href: '#partners'   },
+    { label: t.nav.contact,    type: 'anchor', href: '#contact'    },
   ];
 
   const socialLinks = [
@@ -65,9 +59,9 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <img 
-                src="/logos/nvg-logo.png" 
-                alt="NVG Logo" 
+              <img
+                src="/logos/nvg-logo.png"
+                alt="NVG Logo"
                 className="h-16 w-auto"
               />
               <div>
@@ -76,11 +70,10 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/45 text-sm leading-relaxed mb-6">
-              Plus de 15 ans d'expérience au service des communautés et organisations 
-              publiques comme privées. Groupe sous-régional reconnu depuis 2008.
+              {t.footer.description}
             </p>
             <div className="inline-block px-4 py-2 bg-nvg-blue/20 rounded-lg">
-              <span className="text-nvg-orange font-semibold">Capital social:</span>
+              <span className="text-nvg-orange font-semibold">{t.footer.capital}</span>
               <span className="text-white ml-2">100 000 000 FCFA</span>
             </div>
           </div>
@@ -89,7 +82,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-6 flex items-center gap-2">
               <div className="w-8 h-1 bg-nvg-orange rounded-full" />
-              Liens rapides
+              {t.footer.quickLinks}
             </h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
@@ -120,10 +113,10 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-6 flex items-center gap-2">
               <div className="w-8 h-1 bg-nvg-green rounded-full" />
-              Nos services
+              {t.footer.services}
             </h4>
             <ul className="space-y-3">
-              {services.map((service, index) => (
+              {t.footer.servicesList.map((service, index) => (
                 <li key={index}>
                   <span className="text-white/45 flex items-center gap-2">
                     <div className="w-1.5 h-1.5 bg-white/20 rounded-full" />
@@ -138,7 +131,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-6 flex items-center gap-2">
               <div className="w-8 h-1 bg-nvg-blue rounded-full" />
-              Contact
+              {t.footer.contact}
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
@@ -163,15 +156,13 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Globe className="w-5 h-5 text-nvg-orange flex-shrink-0" />
-                <span className="text-white/45 text-sm">
-                  nvg.bj
-                </span>
+                <span className="text-white/45 text-sm">nvg.bj</span>
               </li>
             </ul>
 
             {/* Social Links */}
             <div className="mt-6">
-              <h5 className="text-sm font-medium mb-3">Suivez-nous</h5>
+              <h5 className="text-sm font-medium mb-3">{t.footer.followUs}</h5>
               <div className="flex gap-3">
                 {socialLinks.map((social, index) => (
                   <a
@@ -194,10 +185,10 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/45 text-sm text-center md:text-left">
-              © {new Date().getFullYear()} New Vision Group SA. Tous droits réservés.
+              © {new Date().getFullYear()} New Vision Group SA. {t.footer.copyright}
             </p>
             <p className="text-white/35 text-sm flex items-center gap-2">
-              Fait avec <Heart className="w-3.5 h-3.5 text-nvg-orange fill-nvg-orange" /> en Afrique
+              {t.footer.madeWith} <Heart className="w-3.5 h-3.5 text-nvg-orange fill-nvg-orange" /> {t.footer.in}
             </p>
             <button
               onClick={scrollToTop}
