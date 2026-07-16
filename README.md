@@ -2,7 +2,7 @@
 
 Site vitrine officiel de **New Vision Group SA**, groupe industriel et commercial béninois fondé en 2008, présent dans 6 pays d'Afrique de l'Ouest.
 
-> Développé par **Wisdom TOZO** — Technicien Informatique & Consultant Digital
+> Développé par **Wisdom TOZO** — Technicien IT
 
 ---
 
