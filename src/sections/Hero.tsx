@@ -1,14 +1,9 @@
-import { useEffect, useRef } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Hero() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const bgRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -16,47 +11,14 @@ export default function Hero() {
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  useEffect(() => {
-    const section = sectionRef.current;
-    if (!section) return;
-
-    const handleMouse = (e: MouseEvent) => {
-      const { clientX, clientY } = e;
-      const { width, height } = section.getBoundingClientRect();
-      const x = (clientX / width - 0.5) * 2;
-      const y = (clientY / height - 0.5) * 2;
-
-      if (bgRef.current) {
-        bgRef.current.style.transform = `translate(${x * 10}px, ${y * 7}px) scale(1.04)`;
-      }
-      if (contentRef.current) {
-        contentRef.current.style.transform = `translate(${x * -4}px, ${y * -3}px)`;
-      }
-    };
-
-    const handleLeave = () => {
-      if (bgRef.current) bgRef.current.style.transform = 'translate(0,0) scale(1.04)';
-      if (contentRef.current) contentRef.current.style.transform = 'translate(0,0)';
-    };
-
-    section.addEventListener('mousemove', handleMouse);
-    section.addEventListener('mouseleave', handleLeave);
-    return () => {
-      section.removeEventListener('mousemove', handleMouse);
-      section.removeEventListener('mouseleave', handleLeave);
-    };
-  }, []);
-
   return (
     <section
-      ref={sectionRef}
       id="accueil"
       className="relative min-h-screen overflow-hidden bg-nvg-dark"
     >
       <div
-        ref={bgRef}
-        className="absolute inset-0 transition-transform duration-100 ease-out will-change-transform"
-        style={{ transform: 'translate(0,0) scale(1.04)' }}
+        className="absolute inset-0"
+        style={{ transform: 'scale(1.04)' }}
       >
         <img
           src="/hero-bg.jpg"
@@ -71,8 +33,7 @@ export default function Hero() {
       <div className="absolute right-0 top-32 hidden h-[420px] w-[420px] rounded-full bg-nvg-blue/[0.12] blur-[120px] dark:block" />
 
       <div
-        ref={contentRef}
-        className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-8 pb-28 pt-32 transition-transform duration-100 ease-out will-change-transform sm:px-16 lg:px-24"
+        className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-8 pb-28 pt-32 sm:px-16 lg:px-24"
       >
         <div className="max-w-4xl">
           <div

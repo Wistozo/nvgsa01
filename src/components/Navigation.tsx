@@ -114,7 +114,7 @@ export default function Navigation() {
           className="absolute top-0 left-0 w-full origin-top"
           style={{
             height: `${readingProgress}%`,
-            background: 'linear-gradient(to bottom, #f97316, #16a34a)',
+            background: 'linear-gradient(to bottom, #f97316, #1e3a8a)',
           }}
         />
       </div>

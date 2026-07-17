@@ -41,11 +41,11 @@
     <meta name="twitter:description" content="Groupe béninois multisectoriel : sacs scolaires solaires LIGHT-TC, serviettes hygiéniques, fournitures scolaires, import-export. Lokossa, Bénin." />
     <meta name="twitter:image" content="https://nvg.bj/logos/nvg-logo.png" />
 
-    <!-- JSON-LD : Organisation (données structurées Google) -->
+    <!-- JSON-LD : Organisation + LocalBusiness (données structurées Google) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": ["Organization", "LocalBusiness"],
       "name": "New Vision Group SA",
       "alternateName": ["NVG", "NVG SA", "New Vision Group"],
       "url": "https://nvg.bj",
@@ -61,25 +61,41 @@
         "@type": "PostalAddress",
         "streetAddress": "Gbedjromèdé 16 Ampoules",
         "addressLocality": "Cotonou",
+        "addressRegion": "Littoral",
         "addressCountry": "BJ"
       },
-      "contactPoint": [
+      "location": [
         {
-          "@type": "ContactPoint",
-          "telephone": "+229-01-94-74-74-11",
-          "contactType": "customer service",
-          "availableLanguage": ["French"]
+          "@type": "Place",
+          "name": "Siège social — Cotonou",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Gbedjromèdé 16 Ampoules",
+            "addressLocality": "Cotonou",
+            "addressRegion": "Littoral",
+            "addressCountry": "BJ"
+          },
+          "telephone": "+229-01-90-94-52-55"
         },
         {
-          "@type": "ContactPoint",
-          "telephone": "+229-01-90-94-52-55",
-          "contactType": "sales",
-          "availableLanguage": ["French"]
+          "@type": "Place",
+          "name": "Unité industrielle — Lokossa",
+          "description": "Unité de production agréée Catégorie B",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lokossa",
+            "addressRegion": "Mono",
+            "addressCountry": "BJ"
+          },
+          "telephone": "+229-01-94-74-74-11"
         }
       ],
+      "telephone": "+229-01-90-94-52-55",
       "email": "newvisiongroup23@gmail.com",
-      "sameAs": [],
+      "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-13:00"],
+      "currenciesAccepted": "XOF",
       "areaServed": ["BJ", "CI", "TG", "BF", "CM", "NE"],
+      "sameAs": [],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Produits et services NVG SA",
