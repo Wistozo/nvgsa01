@@ -39,7 +39,7 @@ export default function ProduitsPage() {
         l("Résistant à l'eau",             'Water resistant'),
         l('Certifié CE',                   'CE certified'),
       ],
-      stat: '38 899', statLabel: l('sacs produits', 'bags produced'),
+      stat: '98 867', statLabel: l('sacs produits', 'bags produced'),
       bg: 'bg-nvg-orange/10 dark:bg-nvg-orange/15',
       text: 'text-nvg-orange dark:text-nvg-orange-light',
       iconBg: 'bg-nvg-orange/15 dark:bg-nvg-orange/20',
@@ -103,10 +103,10 @@ export default function ProduitsPage() {
         l('Certifié ANSM équivalent',  'Equivalent ANSM certified'),
       ],
       stat: '100K+', statLabel: l('flacons distribués', 'flasks distributed'),
-      bg: 'bg-nvg-green/10 dark:bg-nvg-green/15',
-      text: 'text-nvg-green dark:text-nvg-green-light',
-      iconBg: 'bg-nvg-green/15 dark:bg-nvg-green/20',
-      badge: 'bg-nvg-green/10 text-nvg-green dark:bg-nvg-green/20 dark:text-nvg-green-light',
+      bg: 'bg-nvg-blue/10 dark:bg-nvg-blue/15',
+      text: 'text-nvg-blue dark:text-nvg-blue-light',
+      iconBg: 'bg-nvg-blue/15 dark:bg-nvg-blue/25',
+      badge: 'bg-nvg-blue/10 text-nvg-blue dark:bg-nvg-blue/20 dark:text-nvg-blue-light',
     },
     {
       icon: BookOpen,
@@ -145,10 +145,10 @@ export default function ProduitsPage() {
         l('7 402 formés',             '7,402 trained'),
       ],
       stat: '7 402', statLabel: l('couturiers formés', 'seamstresses trained'),
-      bg: 'bg-nvg-green/10 dark:bg-nvg-green/15',
-      text: 'text-nvg-green dark:text-nvg-green-light',
-      iconBg: 'bg-nvg-green/15 dark:bg-nvg-green/20',
-      badge: 'bg-nvg-green/10 text-nvg-green dark:bg-nvg-green/20 dark:text-nvg-green-light',
+      bg: 'bg-nvg-orange/10 dark:bg-nvg-orange/15',
+      text: 'text-nvg-orange dark:text-nvg-orange-light',
+      iconBg: 'bg-nvg-orange/15 dark:bg-nvg-orange/20',
+      badge: 'bg-nvg-orange/10 text-nvg-orange dark:bg-nvg-orange/20 dark:text-nvg-orange-light',
     },
     {
       icon: Sprout,
@@ -166,10 +166,10 @@ export default function ProduitsPage() {
         l('Livraison terrain',             'Field delivery'),
       ],
       stat: '3 000', statLabel: l('machines distribuées', 'machines distributed'),
-      bg: 'bg-nvg-green/10 dark:bg-nvg-green/15',
-      text: 'text-nvg-green dark:text-nvg-green-light',
-      iconBg: 'bg-nvg-green/15 dark:bg-nvg-green/20',
-      badge: 'bg-nvg-green/10 text-nvg-green dark:bg-nvg-green/20 dark:text-nvg-green-light',
+      bg: 'bg-nvg-blue/10 dark:bg-nvg-blue/15',
+      text: 'text-nvg-blue dark:text-nvg-blue-light',
+      iconBg: 'bg-nvg-blue/15 dark:bg-nvg-blue/25',
+      badge: 'bg-nvg-blue/10 text-nvg-blue dark:bg-nvg-blue/20 dark:text-nvg-blue-light',
     },
     {
       icon: Laptop,
@@ -223,10 +223,7 @@ export default function ProduitsPage() {
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
               {p.heroTitle.split(' ')[0]}{' '}
-              <span className="relative inline-block">
-                <span className="relative z-10 bg-nvg-orange text-white px-4 py-1 rounded-xl">{p.heroTitle.split(' ').slice(1).join(' ')}</span>
-                <span className="absolute inset-0 bg-nvg-orange rounded-xl blur-xl opacity-30 scale-110" />
-              </span>
+              <span className="text-nvg-orange">{p.heroTitle.split(' ').slice(1).join(' ')}</span>
             </h1>
             <p className="text-lg text-white/60 leading-relaxed max-w-2xl">
               {p.heroDesc}

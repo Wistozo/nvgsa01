@@ -68,7 +68,7 @@ export default function Hero() {
       </div>
 
       <div className="absolute inset-x-0 top-0 z-10 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-      <div className="absolute right-0 top-32 hidden h-[420px] w-[420px] rounded-full bg-nvg-green/[0.08] blur-[120px] dark:block" />
+      <div className="absolute right-0 top-32 hidden h-[420px] w-[420px] rounded-full bg-nvg-blue/[0.12] blur-[120px] dark:block" />
 
       <div
         ref={contentRef}
@@ -80,7 +80,7 @@ export default function Hero() {
             style={{ animationDelay: '0s', animationFillMode: 'both' }}
           >
             <span className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white/80 backdrop-blur-md">
-              <span className="h-2 w-2 rounded-full bg-nvg-green" />
+              <span className="h-2 w-2 rounded-full bg-nvg-orange" />
               {t.hero.badge}
             </span>
           </div>

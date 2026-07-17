@@ -34,7 +34,7 @@ export default function NotFoundPage() {
       {/* ── Blobs décoratifs ── */}
       <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-nvg-orange/10 rounded-full blur-[120px] pointer-events-none animate-float" />
       <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-nvg-blue/10 rounded-full blur-[100px] pointer-events-none animate-float-slow" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-nvg-green/8 rounded-full blur-[80px] pointer-events-none animate-float" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-nvg-blue/8 rounded-full blur-[80px] pointer-events-none animate-float" style={{ animationDelay: '1s' }} />
 
       {/* ── Watermark 404 géant ── */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">

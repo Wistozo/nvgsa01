@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Target, Eye, Heart, Shield, Users, TrendingUp, Leaf, Award, Factory, Sun, Globe, Calendar } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Target, Eye, Heart, Shield, Users, TrendingUp, Leaf, Award } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
 
 export default function AboutPage() {
@@ -12,24 +12,16 @@ export default function AboutPage() {
     { year: '2008',      title: l('Fondation de NVG', 'NVG Foundation'),          desc: l("Création de New Vision Group SA à Cotonou, Bénin. Démarrage dans la fourniture institutionnelle.", 'Creation of New Vision Group SA in Cotonou, Benin. Start in institutional supply.'),     color: 'bg-nvg-orange' },
     { year: '2019–2023', title: l('Projet SWEDD', 'SWEDD Project'),                desc: l("Partenariat avec l'ONU pour la distribution de 631 000+ serviettes hygiéniques aux jeunes filles à travers la sous-région.", 'Partnership with the UN for the distribution of 631,000+ sanitary napkins to young girls across the sub-region.'), color: 'bg-nvg-blue-light' },
     { year: '2021',      title: l('Innovation LIGHT-TC', 'LIGHT-TC Innovation'),   desc: l('Développement des sacs scolaires solaires LIGHT-TC. Un produit révolutionnaire pour les zones non électrifiées.', 'Development of the LIGHT-TC solar school bag. A revolutionary product for non-electrified areas.'), color: 'bg-nvg-orange' },
-    { year: '2023',      title: l('Lancement de la production', 'Launch of Production'), desc: l("Création de l'unité industrielle à Lokossa. Début de la production de sacs scolaires et tenues.", 'Creation of the industrial unit in Lokossa. Start of production of school bags and uniforms.'), color: 'bg-nvg-green' },
-    { year: '2024',      title: l('Croissance & Impact', 'Growth & Impact'),       desc: l("300+ collaborateurs, 6 pays couverts, certification Catégorie B. NVG, leader reconnu en Afrique de l'Ouest.", '300+ employees, 6 countries covered, Category B certification. NVG, recognized leader in West Africa.'), color: 'bg-nvg-green' },
+    { year: '2023',      title: l('Lancement de la production', 'Launch of Production'), desc: l("Création de l'unité industrielle à Lokossa. Début de la production de sacs scolaires et tenues.", 'Creation of the industrial unit in Lokossa. Start of production of school bags and uniforms.'), color: 'bg-nvg-orange' },
+    { year: '2024',      title: l('Croissance & Impact', 'Growth & Impact'),       desc: l("300+ collaborateurs, 6 pays couverts, certification Catégorie B. NVG, leader reconnu en Afrique de l'Ouest.", '300+ employees, 6 countries covered, Category B certification. NVG, recognized leader in West Africa.'), color: 'bg-nvg-orange' },
     { year: '2025',      title: l('Expansion régionale', 'Regional Expansion'),    desc: l("Présence confirmée dans 6 pays : Bénin, Côte d'Ivoire, Togo, Burkina Faso, Cameroun et Niger.", "Confirmed presence in 6 countries: Benin, Côte d'Ivoire, Togo, Burkina Faso, Cameroon and Niger."), color: 'bg-nvg-blue-light' },
   ];
 
-  const stats = [
-    { icon: Sun,      value: '38 899', label: p.statLabels[0], color: 'text-nvg-orange',     bg: 'bg-nvg-orange/10' },
-    { icon: Users,    value: '300+',   label: p.statLabels[1], color: 'text-nvg-green',      bg: 'bg-nvg-green/10' },
-    { icon: Globe,    value: '6',      label: p.statLabels[2], color: 'text-nvg-blue-light', bg: 'bg-nvg-blue/10' },
-    { icon: Calendar, value: '2008',   label: p.statLabels[3], color: 'text-nvg-green',      bg: 'bg-nvg-green/10' },
-    { icon: Factory,  value: '500K+',  label: p.statLabels[4], color: 'text-nvg-orange',     bg: 'bg-nvg-orange/10' },
-    { icon: Award,    value: '126K+',  label: p.statLabels[5], color: 'text-nvg-blue-light', bg: 'bg-nvg-blue/10' },
-  ];
 
   const values = [
     { icon: Target, title: l('Excellence',     'Excellence'),    desc: l("Nous visons l'excellence dans chaque produit et chaque service, avec des standards de qualité rigoureux à tous les niveaux.", 'We strive for excellence in every product and service, with rigorous quality standards at all levels.'),   color: 'bg-nvg-blue',   glow: 'glow-blue' },
     { icon: Eye,    title: l('Transparence',   'Transparency'),  desc: l("Honnêteté et intégrité dans toutes nos relations — avec nos clients, partenaires, et les communautés que nous servons.", 'Honesty and integrity in all our relationships — with our clients, partners, and the communities we serve.'),  color: 'bg-nvg-orange', glow: 'glow-orange' },
-    { icon: Heart,  title: l('Impact Social',  'Social Impact'), desc: l("Chaque activité de NVG est pensée pour créer un impact positif durable sur les communautés béninoises et africaines.", 'Every NVG activity is designed to create a lasting positive impact on Beninese and African communities.'),    color: 'bg-nvg-green',  glow: 'glow-green' },
+    { icon: Heart,  title: l('Impact Social',  'Social Impact'), desc: l("Chaque activité de NVG est pensée pour créer un impact positif durable sur les communautés béninoises et africaines.", 'Every NVG activity is designed to create a lasting positive impact on Beninese and African communities.'),    color: 'bg-nvg-orange', glow: 'glow-orange' },
     { icon: Shield, title: l('Responsabilité', 'Responsibility'),desc: l("Nous assumons nos engagements envers les communautés, l'environnement et les générations futures avec sérieux et conviction.", 'We take our commitments to communities, the environment and future generations seriously and with conviction.'), color: 'bg-nvg-blue',   glow: 'glow-blue' },
   ];
 
@@ -51,7 +43,7 @@ export default function AboutPage() {
       {/* Page Hero */}
       <div className="relative bg-nvg-dark pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-nvg-green/15 rounded-full blur-[120px]" />
+          <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-nvg-blue/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-nvg-orange/10 rounded-full blur-[100px]" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-16 lg:px-24">
@@ -60,15 +52,12 @@ export default function AboutPage() {
             {t.pages.backLink}
           </Link>
           <div className="max-w-3xl">
-            <span className="inline-block px-4 py-2 bg-nvg-green/20 text-nvg-green rounded-full text-sm font-medium mb-6 border border-nvg-green/30">
+            <span className="inline-block px-4 py-2 bg-nvg-orange/10 text-nvg-orange rounded-full text-sm font-medium mb-6 border border-nvg-orange/20">
               {p.badge}
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
               {p.title}{' '}
-              <span className="relative inline-block">
-                <span className="relative z-10 bg-nvg-orange text-white px-4 py-1 rounded-xl">NVG.</span>
-                <span className="absolute inset-0 bg-nvg-orange rounded-xl blur-xl opacity-30 scale-110" />
-              </span>
+              <span className="text-nvg-orange">NVG.</span>
             </h1>
             <p className="text-lg text-white/60 leading-relaxed max-w-2xl">
               {p.heroDesc}
@@ -80,8 +69,8 @@ export default function AboutPage() {
       {/* Mission & Vision */}
       <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 py-20">
         <div className="grid md:grid-cols-2 gap-8 mb-20">
-          <div className="glass-card glow-green p-6 sm:p-10">
-            <div className="w-14 h-14 bg-nvg-green rounded-2xl flex items-center justify-center mb-6">
+          <div className="glass-card glow-blue p-6 sm:p-10">
+            <div className="w-14 h-14 bg-nvg-blue rounded-2xl flex items-center justify-center mb-6">
               <Target className="w-7 h-7 text-white" />
             </div>
             <h2 className="text-2xl font-extrabold text-nvg-dark dark:text-white mb-4">
@@ -93,8 +82,8 @@ export default function AboutPage() {
             <ul className="space-y-3">
               {p.missionItems.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-nvg-green/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 bg-nvg-green rounded-full" />
+                  <div className="w-5 h-5 bg-nvg-blue/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 bg-nvg-blue rounded-full" />
                   </div>
                   <span className="text-sm text-nvg-gray dark:text-white/60">{item}</span>
                 </li>
@@ -130,7 +119,7 @@ export default function AboutPage() {
             <p className="text-nvg-gray dark:text-white/50">{p.timelineSubtitle}</p>
           </div>
           <div className="relative">
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-nvg-orange/40 via-nvg-blue/40 to-nvg-green/40 hidden md:block" />
+            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-nvg-orange/40 via-nvg-blue/40 to-nvg-orange/40 hidden md:block" />
             <div className="space-y-8">
               {timeline.map((item, index) => (
                 <div key={index} className={`flex items-center gap-4 sm:gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
@@ -149,36 +138,12 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="bg-nvg-dark rounded-3xl p-6 sm:p-10 mb-20 relative overflow-hidden">
-          <div className="absolute top-0 left-1/4 w-[400px] h-[300px] bg-nvg-blue/15 rounded-full blur-[100px]" />
-          <div className="absolute bottom-0 right-1/4 w-[300px] h-[200px] bg-nvg-orange/10 rounded-full blur-[80px]" />
-          <div className="relative z-10">
-            <h2 className="text-2xl font-extrabold text-white text-center mb-10">
-              {p.statsTitle.split(' ')[0]} {p.statsTitle.split(' ')[1]} <span className="text-nvg-orange">{p.statsTitle.split(' ').slice(2).join(' ')}</span>
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
-              {stats.map((s, i) => {
-                const Icon = s.icon;
-                return (
-                  <div key={i} className="text-center">
-                    <div className={`w-12 h-12 ${s.bg} rounded-xl flex items-center justify-center mx-auto mb-3`}>
-                      <Icon className={`w-6 h-6 ${s.color}`} />
-                    </div>
-                    <div className={`text-3xl font-extrabold ${s.color} mb-1`}>{s.value}</div>
-                    <div className="text-xs text-white/40 uppercase tracking-widest font-medium">{s.label}</div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
 
         {/* Values */}
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-extrabold text-nvg-dark dark:text-white mb-3">
-              {p.valuesTitle.split(' ')[0]} <span className="text-nvg-green">{p.valuesTitle.split(' ').slice(1).join(' ')}</span>
+              {p.valuesTitle.split(' ')[0]} <span className="text-nvg-orange">{p.valuesTitle.split(' ').slice(1).join(' ')}</span>
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -200,7 +165,7 @@ export default function AboutPage() {
         {/* Engagements */}
         <div className="bg-gradient-to-r from-nvg-dark via-nvg-blue to-nvg-blue-light rounded-3xl p-6 sm:p-10 lg:p-16 text-white relative overflow-hidden mb-20">
           <div className="absolute top-0 right-0 w-64 h-64 bg-nvg-orange/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-nvg-green/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-nvg-blue/10 rounded-full blur-3xl" />
           <div className="relative z-10">
             <div className="text-center mb-10">
               <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">{p.commitmentsTitle}</h2>

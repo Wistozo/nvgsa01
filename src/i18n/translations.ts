@@ -17,7 +17,7 @@ export const translations = {
       scrollText: 'Découvrir',
       imageAlt: 'Unité de production NVG',
       impactStats: [
-        { value: '38 899', label: 'sacs solaires LIGHT-TC' },
+        { value: '98 867', label: 'sacs solaires LIGHT-TC' },
         { value: '6',       label: 'pays de présence' },
         { value: '300+',    label: 'collaborateurs' },
       ],
@@ -165,7 +165,7 @@ export const translations = {
         heroTitle: "Nos Zones d'Intervention.",
         heroDesc: "De Cotonou à Abidjan, de Lomé à Ouagadougou — NVG étend son impact sur 6 pays d'Afrique de l'Ouest avec une organisation locale adaptée à chaque marché.",
         quickStats: [
-          { value: '6',    label: 'Pays couverts',               color: 'text-nvg-green' },
+          { value: '6',    label: 'Pays couverts',               color: 'text-nvg-orange' },
           { value: '1',    label: 'Siège + unité de production',  color: 'text-nvg-orange' },
           { value: '300+', label: 'Collaborateurs régionaux',     color: 'text-nvg-blue-light' },
         ],
@@ -208,7 +208,7 @@ export const translations = {
       scrollText: 'Scroll',
       imageAlt: 'NVG production unit',
       impactStats: [
-        { value: '38 899', label: 'LIGHT-TC solar bags' },
+        { value: '98 867', label: 'LIGHT-TC solar bags' },
         { value: '6',       label: 'countries' },
         { value: '300+',    label: 'employees' },
       ],
@@ -356,7 +356,7 @@ export const translations = {
         heroTitle: 'Our Areas of Intervention.',
         heroDesc: 'From Cotonou to Abidjan, from Lomé to Ouagadougou — NVG extends its impact across 6 West African countries with a local organization adapted to each market.',
         quickStats: [
-          { value: '6',    label: 'Countries covered',    color: 'text-nvg-green' },
+          { value: '6',    label: 'Countries covered',    color: 'text-nvg-orange' },
           { value: '1',    label: 'HQ + production unit', color: 'text-nvg-orange' },
           { value: '300+', label: 'Regional employees',   color: 'text-nvg-blue-light' },
         ],

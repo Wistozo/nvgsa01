@@ -2,17 +2,6 @@ import { Link } from 'react-router-dom';
 import { Factory, Truck, Ship, Sprout, ArrowRight } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
 
-const handleTilt = (e: React.MouseEvent<HTMLDivElement>) => {
-  const el   = e.currentTarget;
-  const rect = el.getBoundingClientRect();
-  const x    = (e.clientX - rect.left) / rect.width  - 0.5;
-  const y    = (e.clientY - rect.top)  / rect.height - 0.5;
-  el.style.transform = `perspective(900px) rotateY(${x * 7}deg) rotateX(${-y * 7}deg) translateY(-4px)`;
-};
-
-const resetTilt = (e: React.MouseEvent<HTMLDivElement>) => {
-  e.currentTarget.style.transform = '';
-};
 
 const areas = [
   {
@@ -20,7 +9,7 @@ const areas = [
     title: 'Production & Commercialisation',
     desc: 'Sacs solaires, tenues scolaires, serviettes hygiéniques et gels biomédicaux depuis notre unité de Lokossa.',
     color: 'from-nvg-blue to-nvg-blue-light',
-    bg: 'bg-nvg-blue/10 dark:bg-nvg-blue/20',
+    bg: 'bg-nvg-blue/8 dark:bg-nvg-blue/15',
     iconColor: 'text-nvg-blue',
     glow: 'glow-blue',
   },
@@ -29,7 +18,7 @@ const areas = [
     title: 'Fourniture & Installation',
     desc: "Équipements pédagogiques, informatiques et mobiliers pour organismes publics et privés à travers l'Afrique.",
     color: 'from-nvg-orange to-nvg-orange-light',
-    bg: 'bg-nvg-orange/10 dark:bg-nvg-orange/20',
+    bg: 'bg-nvg-orange/8 dark:bg-nvg-orange/15',
     iconColor: 'text-nvg-orange',
     glow: 'glow-orange',
   },
@@ -37,18 +26,18 @@ const areas = [
     icon: Ship,
     title: 'Import-Export',
     desc: "Logistique et négoce de produits tropicaux, équipements informatiques et bureautiques sur les marchés internationaux.",
-    color: 'from-nvg-green to-nvg-green-light',
-    bg: 'bg-nvg-green/10 dark:bg-nvg-green/20',
-    iconColor: 'text-nvg-green',
-    glow: 'glow-green',
+    color: 'from-nvg-orange to-nvg-orange-light',
+    bg: 'bg-nvg-orange/8 dark:bg-nvg-orange/15',
+    iconColor: 'text-nvg-orange',
+    glow: 'glow-orange',
   },
   {
     icon: Sprout,
     title: 'Intrants Agricoles',
     desc: "Semences certifiées, machines et produits bio pour une agriculture durable en Afrique de l'Ouest.",
-    color: 'from-nvg-blue to-nvg-green',
-    bg: 'bg-nvg-blue/10 dark:bg-nvg-blue/20',
-    iconColor: 'text-nvg-blue',
+    color: 'from-nvg-blue to-nvg-blue-light',
+    bg: 'bg-nvg-blue/8 dark:bg-nvg-blue/15',
+    iconColor: 'text-nvg-blue-light',
     glow: 'glow-blue',
   },
 ];
@@ -90,10 +79,7 @@ export default function Expertise() {
           {areas.map((area, i) => (
             <div
               key={i}
-              className={`relative glass-card border-beam ${area.glow} p-6 transition-all duration-300 group overflow-hidden`}
-              style={{ willChange: 'transform' }}
-              onMouseMove={handleTilt}
-              onMouseLeave={resetTilt}
+              className={`relative glass-card ${area.glow} p-6 transition-all duration-300 group overflow-hidden`}
             >
               {/* Top accent line on hover */}
               <div className={`absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r ${area.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />

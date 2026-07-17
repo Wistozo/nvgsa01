@@ -107,8 +107,8 @@ export default function Navigation() {
 
   return (
     <>
-      {/* ── Reading progress — left-side vertical bar ── */}
-      <div className="fixed left-0 top-0 bottom-0 w-[3px] z-[9996] pointer-events-none">
+      {/* ── Reading progress — right-side vertical bar ── */}
+      <div className="fixed right-0 top-0 bottom-0 w-[3px] z-[9996] pointer-events-none">
         <div className="absolute inset-0 bg-black/10" />
         <motion.div
           className="absolute top-0 left-0 w-full origin-top"
@@ -138,16 +138,16 @@ export default function Navigation() {
       </div>
 
       {/* ── Top Bar ── */}
-      <div className={`fixed top-0 left-0 right-0 z-50 bg-nvg-blue text-white py-2 px-4 transition-transform duration-300 ${isScrolled ? '-translate-y-full' : 'translate-y-0'}`}>
+      <div className="fixed top-0 left-0 right-0 z-50 bg-nvg-blue text-white py-2 px-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center gap-4">
             <a href="tel:+2290194747411" className="flex items-center gap-1 hover:text-nvg-orange transition-colors">
               <Phone className="w-3 h-3" />
               <span className="text-xs">+229 01 94 74 74 11</span>
             </a>
-            <a href="mailto:info@newvisiongroupsa.bj" className="hidden sm:flex items-center gap-1 hover:text-nvg-orange transition-colors">
+            <a href="mailto:newvisiongroup23@gmail.com" className="hidden sm:flex items-center gap-1 hover:text-nvg-orange transition-colors">
               <Mail className="w-3 h-3" />
-              <span>info@newvisiongroupsa.bj</span>
+              <span>newvisiongroup23@gmail.com</span>
             </a>
           </div>
           <div className="flex items-center gap-4">
@@ -164,8 +164,8 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* ── Main Navigation (ghost → solid) ── */}
-      <nav className={`fixed left-0 right-0 z-40 transition-all duration-300 ${isScrolled ? 'top-0 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md shadow-nvg' : 'top-8 bg-gradient-to-b from-black/50 to-transparent'}`}>
+      {/* ── Main Navigation (ghost → solid dark) ── */}
+      <nav className={`fixed left-0 right-0 z-40 transition-all duration-300 ${isScrolled ? 'top-10 bg-nvg-dark/95 backdrop-blur-md shadow-lg' : 'top-10 bg-gradient-to-b from-black/50 to-transparent'}`}>
         <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24">
           <div className="flex justify-between items-center h-16">
 
@@ -173,7 +173,7 @@ export default function Navigation() {
             <Link to="/" className="flex items-center gap-3 flex-shrink-0">
               <img src="/logos/nvg-logo.png" alt="NVG Logo" className="h-12 w-auto" />
               <div className="hidden sm:block">
-                <p className={`font-bold text-lg leading-tight transition-colors ${isScrolled ? 'text-nvg-blue dark:text-white' : 'text-white'}`}>
+                <p className="font-bold text-lg leading-tight text-white">
                   NEW VISION
                 </p>
                 <p className="text-xs font-medium text-nvg-orange">GROUP SA</p>
@@ -192,7 +192,7 @@ export default function Navigation() {
                       isActive
                         ? 'text-nvg-orange active'
                         : isScrolled
-                          ? 'text-nvg-dark dark:text-white hover:text-nvg-blue dark:hover:text-nvg-orange'
+                          ? 'text-white/80 hover:text-nvg-orange'
                           : 'text-white hover:text-nvg-orange drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]'
                     }`}
                   >
@@ -210,26 +210,12 @@ export default function Navigation() {
               >
                 Nous contacter
               </Button>
-              <button
-                onClick={() => setIsMenuOpen(true)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-xl border transition-all duration-300 text-sm font-semibold ${
-                  isScrolled
-                    ? 'border-nvg-dark/20 dark:border-white/20 text-nvg-dark dark:text-white hover:border-nvg-orange hover:text-nvg-orange'
-                    : 'border-white/40 text-white hover:border-nvg-orange hover:text-nvg-orange'
-                }`}
-                aria-label="Ouvrir le menu"
-              >
-                <Menu className="w-4 h-4" />
-                <span className="tracking-widest text-xs uppercase">Menu</span>
-              </button>
             </div>
 
             {/* Mobile hamburger */}
             <button
               onClick={() => setIsMenuOpen(true)}
-              className={`lg:hidden p-2 rounded-lg transition-colors ${
-                isScrolled ? 'text-nvg-dark dark:text-white hover:bg-nvg-blue/10' : 'text-white hover:bg-white/10'
-              }`}
+              className="lg:hidden p-2 rounded-lg transition-colors text-white hover:bg-white/10"
               aria-label="Menu"
             >
               <Menu className="w-6 h-6" />
@@ -252,7 +238,7 @@ export default function Navigation() {
             {/* Background blobs */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-nvg-blue/10 rounded-full blur-[140px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-nvg-orange/8 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-nvg-green/5 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-nvg-blue/5 rounded-full blur-[100px] pointer-events-none" />
 
             {/* Close button */}
             <button
@@ -333,9 +319,9 @@ export default function Navigation() {
                     <Phone className="w-3.5 h-3.5 shrink-0 group-hover:scale-110 transition-transform" />
                     <span className="text-sm">+229 01 94 74 74 11</span>
                   </a>
-                  <a href="mailto:info@newvisiongroupsa.bj" className="flex items-center gap-3 text-white/40 hover:text-nvg-orange transition-colors group">
+                  <a href="mailto:newvisiongroup23@gmail.com" className="flex items-center gap-3 text-white/40 hover:text-nvg-orange transition-colors group">
                     <Mail className="w-3.5 h-3.5 shrink-0 group-hover:scale-110 transition-transform" />
-                    <span className="text-sm">info@newvisiongroupsa.bj</span>
+                    <span className="text-sm">newvisiongroup23@gmail.com</span>
                   </a>
                   <div className="flex items-start gap-3 text-white/40">
                     <MapPin className="w-3.5 h-3.5 shrink-0 mt-0.5" />

@@ -3,17 +3,17 @@ import { Sun, Shirt, Heart, FlaskConical, BookOpen, GraduationCap, ArrowRight } 
 import { useTranslation } from '@/hooks/useTranslation';
 
 const ITEMS_CONFIG = [
-  { icon: Sun,          bg: 'bg-nvg-orange/10 dark:bg-nvg-orange/15', text: 'text-nvg-orange dark:text-nvg-orange-light',  iconBg: 'bg-nvg-orange/15 dark:bg-nvg-orange/20' },
-  { icon: Shirt,        bg: 'bg-nvg-blue/10 dark:bg-nvg-blue/15',     text: 'text-nvg-blue dark:text-nvg-blue-light',       iconBg: 'bg-nvg-blue/15 dark:bg-nvg-blue/25' },
-  { icon: Heart,        bg: 'bg-nvg-orange/10 dark:bg-nvg-orange/15', text: 'text-nvg-orange dark:text-nvg-orange-light',   iconBg: 'bg-nvg-orange/15 dark:bg-nvg-orange/20' },
-  { icon: FlaskConical, bg: 'bg-nvg-green/10 dark:bg-nvg-green/15',   text: 'text-nvg-green dark:text-nvg-green-light',    iconBg: 'bg-nvg-green/15 dark:bg-nvg-green/20' },
-  { icon: BookOpen,     bg: 'bg-nvg-blue/10 dark:bg-nvg-blue/15',     text: 'text-nvg-blue dark:text-nvg-blue-light',       iconBg: 'bg-nvg-blue/15 dark:bg-nvg-blue/25' },
-  { icon: GraduationCap,bg: 'bg-nvg-green/10 dark:bg-nvg-green/15',   text: 'text-nvg-green dark:text-nvg-green-light',    iconBg: 'bg-nvg-green/15 dark:bg-nvg-green/20' },
+  { icon: Sun           },
+  { icon: Shirt         },
+  { icon: Heart         },
+  { icon: FlaskConical  },
+  { icon: BookOpen      },
+  { icon: GraduationCap },
 ];
 
 const PILLS_COLORS = [
-  'bg-nvg-orange/10 text-nvg-orange border-nvg-orange/20',
-  'bg-nvg-green/10  text-nvg-green  border-nvg-green/20',
+  'bg-nvg-orange/10 text-nvg-orange     border-nvg-orange/20',
+  'bg-nvg-orange/10 text-nvg-orange     border-nvg-orange/20',
   'bg-nvg-blue/10   text-nvg-blue-light border-nvg-blue/20',
 ];
 
@@ -69,15 +69,15 @@ export default function Products() {
             return (
               <div
                 key={item.name}
-                className={`${item.bg} ${item.text} group relative flex min-h-[158px] cursor-default flex-col justify-between overflow-hidden rounded-2xl border border-black/5 p-5 shadow-[0_18px_50px_-35px_rgba(15,23,42,0.55)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_-38px_rgba(15,23,42,0.7)] dark:border-white/10`}
+                className="group relative flex min-h-[158px] cursor-default flex-col justify-between overflow-hidden rounded-2xl border border-black/5 dark:border-white/[0.08] bg-white dark:bg-white/[0.04] p-5 shadow-[0_18px_50px_-35px_rgba(15,23,42,0.55)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_-38px_rgba(15,23,42,0.7)]"
               >
-                <div className="absolute inset-x-0 top-0 h-1 bg-current opacity-10" />
-                <div className={`w-10 h-10 ${item.iconBg} rounded-xl flex items-center justify-center`}>
-                  <Icon className={`w-5 h-5 ${item.text}`} />
+                <div className="absolute inset-x-0 top-0 h-1 bg-nvg-orange/40" />
+                <div className="w-10 h-10 bg-nvg-orange/10 rounded-xl flex items-center justify-center">
+                  <Icon className="w-5 h-5 text-nvg-orange" />
                 </div>
                 <div>
-                  <p className={`font-semibold text-sm leading-snug ${item.text}`}>{item.name}</p>
-                  <p className={`text-xs mt-0.5 opacity-60 ${item.text}`}>{item.sub}</p>
+                  <p className="font-semibold text-sm leading-snug text-nvg-dark dark:text-white">{item.name}</p>
+                  <p className="text-xs mt-0.5 text-nvg-gray dark:text-white/50">{item.sub}</p>
                 </div>
               </div>
             );

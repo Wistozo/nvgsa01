@@ -20,10 +20,10 @@ export default function About() {
   return (
     <section id="about" className="relative section-padding bg-nvg-light dark:bg-nvg-dark transition-colors duration-300 overflow-hidden">
 
-      {/* Background watermark */}
       <div className="absolute -top-6 -right-6 text-[5rem] sm:text-[9rem] lg:text-[14rem] font-black text-nvg-dark/[0.03] dark:text-white/[0.025] leading-none select-none pointer-events-none tracking-tighter">
         ABOUT
       </div>
+
 
       <div className="max-w-7xl mx-auto relative z-10">
 
@@ -66,7 +66,7 @@ export default function About() {
                   <span className="text-nvg-gray dark:text-white/40 ml-1">sacs/an</span>
                 </div>
                 <div>
-                  <span className="font-bold text-nvg-green">150+</span>
+                  <span className="font-bold text-nvg-orange">150+</span>
                   <span className="text-nvg-gray dark:text-white/40 ml-1">emplois</span>
                 </div>
               </div>
@@ -74,19 +74,19 @@ export default function About() {
           </div>
 
           <div
-            className="glass-card glow-green p-6 flex items-start gap-4 transition-all duration-300"
+            className="glass-card glow-orange p-6 flex items-start gap-4 transition-all duration-300"
             style={{ willChange: 'transform' }}
             onMouseMove={handleTilt}
             onMouseLeave={resetTilt}
           >
-            <div className="w-14 h-14 bg-nvg-green/10 dark:bg-nvg-green/20 rounded-2xl flex items-center justify-center flex-shrink-0">
-              <TrendingUp className="w-7 h-7 text-nvg-green" />
+            <div className="w-14 h-14 bg-nvg-orange/10 dark:bg-nvg-orange/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+              <TrendingUp className="w-7 h-7 text-nvg-orange" />
             </div>
             <div>
               <h4 className="font-bold text-nvg-dark dark:text-white mb-1">Impact Social</h4>
               <p className="text-sm text-nvg-gray dark:text-white/50 mb-3">Autonomisation & éducation</p>
               <div>
-                <span className="font-bold text-nvg-green">126 000+</span>
+                <span className="font-bold text-nvg-orange">126 000+</span>
                 <span className="text-nvg-gray dark:text-white/40 ml-1 text-sm">filles bénéficiaires</span>
               </div>
             </div>
@@ -105,7 +105,7 @@ export default function About() {
               <h4 className="font-bold text-nvg-dark dark:text-white mb-1">Innovation Solaire</h4>
               <p className="text-sm text-nvg-gray dark:text-white/50 mb-3">Technologie LIGHT-TC</p>
               <div>
-                <span className="font-bold text-nvg-blue-light">38 899</span>
+                <span className="font-bold text-nvg-blue-light">98 867</span>
                 <span className="text-nvg-gray dark:text-white/40 ml-1 text-sm">sacs produits</span>
               </div>
             </div>

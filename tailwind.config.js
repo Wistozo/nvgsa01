@@ -51,6 +51,12 @@ module.exports = {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Navy palette (corporate dark shades)
+        navy: {
+          900: '#0f172a',
+          800: '#1e293b',
+          700: '#334155',
+        },
         // NVG Brand Colors
         nvg: {
           blue: "#1e3a8a",

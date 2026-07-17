@@ -26,7 +26,7 @@ export default function ExpertisePage() {
         l('100+ machines industrielles',                 '100+ industrial machines'),
       ],
       stats: [
-        { value: '38 899', label: l('Sacs produits',   'Bags produced') },
+        { value: '98 867', label: l('Sacs produits',   'Bags produced') },
         { value: '150+',   label: l('Employés',        'Employees') },
         { value: '500K+',  label: l('Sacs / an (cap.)','Bags / year (cap.)') },
       ],
@@ -82,10 +82,10 @@ export default function ExpertisePage() {
         { value: '300+', label: l('Collaborateurs',   'Employees') },
         { value: '2008', label: l('Depuis',           'Since') },
       ],
-      color: 'from-nvg-green to-nvg-green-light',
-      accent: 'text-nvg-green',
-      border: 'border-nvg-green/30',
-      bg: 'bg-nvg-green/5 dark:bg-nvg-green/10',
+      color: 'from-nvg-orange to-nvg-orange-light',
+      accent: 'text-nvg-orange',
+      border: 'border-nvg-orange/30',
+      bg: 'bg-nvg-orange/5 dark:bg-nvg-orange/10',
     },
     {
       icon: Sprout,
@@ -108,10 +108,10 @@ export default function ExpertisePage() {
         { value: '7 402', label: l('Couturiers formés',    'Seamstresses trained') },
         { value: l('Bio', 'Organic'), label: l('Approche certifiée', 'Certified approach') },
       ],
-      color: 'from-nvg-blue to-nvg-green',
-      accent: 'text-nvg-green',
-      border: 'border-nvg-green/30',
-      bg: 'bg-nvg-green/5 dark:bg-nvg-green/10',
+      color: 'from-nvg-blue to-nvg-orange',
+      accent: 'text-nvg-orange',
+      border: 'border-nvg-orange/30',
+      bg: 'bg-nvg-orange/5 dark:bg-nvg-orange/10',
     },
   ];
 
@@ -123,7 +123,7 @@ export default function ExpertisePage() {
         "Équipés de panneaux solaires et d'une batterie intégrée Li-ion, ces sacs permettent aux élèves des zones non électrifiées d'étudier la nuit avec une autonomie d'au moins 2 heures de lumière.",
         'Equipped with solar panels and an integrated Li-ion battery, these bags allow students in non-electrified areas to study at night with at least 2 hours of light autonomy.'
       ),
-      stat: '38 899', statLabel: l('sacs produits', 'bags produced'),
+      stat: '98 867', statLabel: l('sacs produits', 'bags produced'),
       tags: [l('Énergie solaire', 'Solar energy'), l('Autonomie 2h+', '2h+ autonomy'), 'LIGHT-TC'],
       color: 'text-nvg-orange',
     },
@@ -147,7 +147,7 @@ export default function ExpertisePage() {
       ),
       stat: '631 070', statLabel: l('serviettes distribuées', 'napkins distributed'),
       tags: ['Projet SWEDD', l('Impact social', 'Social impact'), l('126K+ bénéficiaires', '126K+ beneficiaries')],
-      color: 'text-nvg-green',
+      color: 'text-nvg-orange',
     },
     {
       icon: BookOpen,
@@ -175,7 +175,7 @@ export default function ExpertisePage() {
         <div className="absolute inset-0">
           <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-nvg-blue/20 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-nvg-orange/15 rounded-full blur-[100px]" />
-          <div className="absolute top-1/2 left-0 w-[200px] h-[200px] bg-nvg-green/10 rounded-full blur-[80px]" />
+          <div className="absolute top-1/2 left-0 w-[200px] h-[200px] bg-nvg-blue/10 rounded-full blur-[80px]" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-16 lg:px-24">
           <Link to="/" className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors text-sm mb-8 group">
@@ -188,10 +188,7 @@ export default function ExpertisePage() {
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
               {p.heroTitle.split(' ').slice(0, -1).join(' ')}{' '}
-              <span className="relative inline-block">
-                <span className="relative z-10 bg-nvg-orange text-white px-4 py-1 rounded-xl">{p.heroTitle.split(' ').slice(-1)}</span>
-                <span className="absolute inset-0 bg-nvg-orange rounded-xl blur-xl opacity-30 scale-110" />
-              </span>
+              <span className="text-nvg-orange">{p.heroTitle.split(' ').slice(-1)}</span>
             </h1>
             <p className="text-lg text-white/60 leading-relaxed max-w-2xl">
               {p.heroDesc}
@@ -241,14 +238,6 @@ export default function ExpertisePage() {
                 <div className={`glass-card p-6 sm:p-8 ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
                   <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-2xl flex items-center justify-center mb-8`}>
                     <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="grid grid-cols-3 gap-3 sm:gap-6 mb-8">
-                    {area.stats.map((s, si) => (
-                      <div key={si} className="text-center">
-                        <div className={`text-2xl font-extrabold ${area.accent} mb-1`}>{s.value}</div>
-                        <div className="text-xs text-nvg-gray dark:text-white/40 font-medium">{s.label}</div>
-                      </div>
-                    ))}
                   </div>
                   <div className={`h-px bg-gradient-to-r ${area.color} opacity-20 mb-6`} />
                   <p className="text-xs text-nvg-gray dark:text-white/30 uppercase tracking-widest font-semibold">
@@ -302,7 +291,7 @@ export default function ExpertisePage() {
       <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-24 py-20">
         <div className="bg-gradient-to-r from-nvg-dark via-nvg-blue to-nvg-blue-light rounded-3xl p-6 sm:p-10 lg:p-16 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-nvg-orange/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-nvg-green/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-nvg-blue/10 rounded-full blur-3xl" />
           <div className="relative z-10">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-4">{p.ctaTitle}</h2>
             <p className="text-white/60 mb-8 max-w-xl mx-auto">{p.ctaSubtitle}</p>

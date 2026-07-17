@@ -16,7 +16,7 @@ function useTilt() {
     const rect = el.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width  - 0.5;
     const y = (e.clientY - rect.top)  / rect.height - 0.5;
-    el.style.transform = `perspective(800px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg)`;
+    el.style.transform = `perspective(1200px) rotateY(${x * 4}deg) rotateX(${-y * 4}deg)`;
   };
   const handleLeave = () => {
     if (ref.current) ref.current.style.transform = '';
@@ -54,10 +54,10 @@ function Counter({ target, suffix = '' }: { target: number; suffix?: string }) {
 }
 
 const STATS_CONFIG = [
-  { icon: Sun,      value: 38899, suffix: '',  iconColor: 'text-nvg-orange',     accentColor: '#f97316', span: 'col-span-12 lg:col-span-8', large: true  },
+  { icon: Sun,      value: 98867, suffix: '',  iconColor: 'text-nvg-orange',     accentColor: '#f97316', span: 'col-span-12 lg:col-span-8', large: true  },
   { icon: Users,    value: 300,   suffix: '+', iconColor: 'text-nvg-green',      accentColor: '#16a34a', span: 'col-span-12 lg:col-span-4', large: false },
   { icon: Globe,    value: 6,     suffix: '',  iconColor: 'text-nvg-blue-light', accentColor: '#2563eb', span: 'col-span-12 lg:col-span-4', large: false },
-  { icon: Calendar, value: 2008,  suffix: '',  iconColor: 'text-nvg-green',      accentColor: '#16a34a', span: 'col-span-12 lg:col-span-8', large: true  },
+  { icon: Calendar, value: 2008,  suffix: '',  iconColor: 'text-nvg-orange',     accentColor: '#f97316', span: 'col-span-12 lg:col-span-8', large: true  },
 ];
 
 type StatItem = (typeof STATS_CONFIG)[number] & { label: string; sub: string };
@@ -68,8 +68,8 @@ function StatCard({ stat, index }: { stat: StatItem; index: number }) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
-      whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-8%' }}
       transition={{ duration: 0.7, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
       className={stat.span}

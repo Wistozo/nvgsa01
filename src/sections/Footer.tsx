@@ -112,7 +112,7 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 className="font-semibold text-lg mb-6 flex items-center gap-2">
-              <div className="w-8 h-1 bg-nvg-green rounded-full" />
+              <div className="w-8 h-1 bg-nvg-orange rounded-full" />
               {t.footer.services}
             </h4>
             <ul className="space-y-3">
@@ -130,7 +130,7 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h4 className="font-semibold text-lg mb-6 flex items-center gap-2">
-              <div className="w-8 h-1 bg-nvg-blue rounded-full" />
+              <div className="w-8 h-1 bg-nvg-orange rounded-full" />
               {t.footer.contact}
             </h4>
             <ul className="space-y-4">
@@ -142,16 +142,16 @@ export default function Footer() {
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-nvg-green flex-shrink-0" />
+                <Phone className="w-5 h-5 text-nvg-orange flex-shrink-0" />
                 <span className="text-white/45 text-sm">
                   +22901 94 74 74 11<br />
                   +22901 90 94 52 55
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-nvg-blue flex-shrink-0" />
+                <Mail className="w-5 h-5 text-nvg-orange flex-shrink-0" />
                 <span className="text-white/45 text-sm">
-                  info@newvisiongroupsa.bj
+                  newvisiongroup23@gmail.com
                 </span>
               </li>
               <li className="flex items-center gap-3">

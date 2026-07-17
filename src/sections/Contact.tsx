@@ -71,7 +71,7 @@ export default function Contact() {
     {
       num: '01', icon: MapPin, title: t.contact.labels.address,
       lines: ['Cotonou, Gbedjromèdé 16 Ampoules', 'Bénin'],
-      color: 'text-nvg-blue', dot: 'bg-nvg-blue'
+      color: 'text-nvg-orange', dot: 'bg-nvg-orange'
     },
     {
       num: '02', icon: Phone, title: t.contact.labels.phone,
@@ -80,13 +80,13 @@ export default function Contact() {
     },
     {
       num: '03', icon: Mail, title: t.contact.labels.email,
-      lines: ['info@newvisiongroupsa.bj', 's.client@newvisiongroupsa.bj'],
-      color: 'text-nvg-green', dot: 'bg-nvg-green'
+      lines: ['newvisiongroup23@gmail.com'],
+      color: 'text-nvg-orange', dot: 'bg-nvg-orange'
     },
     {
       num: '04', icon: Globe, title: t.contact.labels.web,
       lines: ['nvg.bj'],
-      color: 'text-nvg-blue', dot: 'bg-nvg-blue'
+      color: 'text-nvg-orange', dot: 'bg-nvg-orange'
     },
   ];
 
@@ -96,8 +96,8 @@ export default function Contact() {
       className="relative bg-nvg-dark overflow-hidden"
     >
       {/* Wave transition depuis Partners (fond blanc) — masquée en mode nuit */}
-      <div className="absolute top-0 left-0 right-0 dark:hidden" style={{ transform: 'scaleY(-1)' }}>
-        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+      <div className="absolute top-0 left-0 right-0 dark:hidden" style={{ transform: 'scaleY(-1)', top: '-1px' }}>
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block">
           <path
             d="M0 80L48 72C96 64 192 48 288 42C384 36 480 40 576 44C672 48 768 52 864 50C960 48 1056 40 1152 38C1248 36 1344 40 1392 42L1440 44V80H1392C1344 80 1248 80 1152 80C1056 80 960 80 864 80C768 80 672 80 576 80C480 80 384 80 288 80C192 80 96 80 48 80H0Z"
             fill="white"
@@ -131,7 +131,7 @@ export default function Contact() {
               className="text-white/10 text-xs font-semibold uppercase tracking-[0.2em] whitespace-nowrap flex items-center gap-8"
             >
               {kw}
-              <span className="text-nvg-green/20 text-base leading-none">◆</span>
+              <span className="text-nvg-orange/20 text-base leading-none">◆</span>
             </span>
           ))}
         </div>
@@ -160,13 +160,7 @@ export default function Contact() {
             <span className="inline-flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
               prochain
               {/* ← "Stick." style highlight */}
-              <span className="relative inline-block">
-                <span className="relative z-10 bg-nvg-orange text-white px-6 py-2 rounded-2xl font-extrabold">
-                  Projet.
-                </span>
-                {/* glow */}
-                <span className="absolute inset-0 bg-nvg-orange rounded-2xl blur-xl opacity-30 scale-110" />
-              </span>
+              <span className="text-nvg-orange font-extrabold">Projet.</span>
             </span>
           </h2>
 
@@ -225,7 +219,7 @@ export default function Contact() {
             {/* Business hours */}
             <div className="mt-10 pt-8 border-t border-white/[0.05]">
               <div className="flex items-center gap-2 mb-5">
-                <Clock className="w-3.5 h-3.5 text-nvg-green opacity-70" />
+                <Clock className="w-3.5 h-3.5 text-nvg-orange opacity-70" />
                 <p className="text-[10px] uppercase tracking-[0.3em] text-white/25 font-semibold">
                   {t.contact.hoursTitle}
                 </p>
@@ -259,15 +253,15 @@ export default function Contact() {
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-white mb-1">
                   {t.contact.form.title}{' '}
-                  <span className="text-nvg-green">{t.contact.form.titleHighlight}</span>
+                  <span className="text-nvg-orange">{t.contact.form.titleHighlight}</span>
                 </h3>
                 <p className="text-white/25 text-sm">Réponse sous 24h ouvrées.</p>
               </div>
 
               {isSubmitted ? (
                 <div className="text-center py-16">
-                  <div className="w-16 h-16 bg-nvg-green/10 border border-nvg-green/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle className="w-8 h-8 text-nvg-green" />
+                  <div className="w-16 h-16 bg-nvg-orange/10 border border-nvg-orange/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle className="w-8 h-8 text-nvg-orange" />
                   </div>
                   <h4 className="text-xl font-bold text-white mb-2">{t.contact.form.success}</h4>
                   <p className="text-white/40">{t.contact.form.successDesc}</p>
