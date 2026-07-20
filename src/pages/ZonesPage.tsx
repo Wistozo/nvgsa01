@@ -16,8 +16,8 @@ export default function ZonesPage() {
       capital: 'Cotonou',
       role: l('Siège social & Unité industrielle', 'Headquarters & Industrial unit'),
       details: l(
-        'Quartier général du groupe depuis 2008. Unité de production à Lokossa (Mono), agréée Catégorie B.',
-        'Group headquarters since 2008. Production unit in Lokossa (Mono), Category B approved.'
+        'Quartier général du groupe depuis 2008. Unité industrielle à Lokossa (Mono) active depuis 2023, agréée Catégorie B.',
+        'Group headquarters since 2008. Industrial unit in Lokossa (Mono) active since 2023, Category B approved.'
       ),
       phone: '+229 01 90 94 52 55',
       email: 'newvisiongroup23@gmail.com',
