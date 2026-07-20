@@ -9,7 +9,7 @@ const row1 = [
 ];
 
 const row2 = [
-  { name: 'Projet WOURI',       logo: '/logos/wuri.png'              },
+  { name: 'Projet WURI',        logo: '/logos/wuri.png'              },
   { name: 'SoBAPS SA',          logo: '/logos/sobaps.png'            },
   { name: 'Mairie de Cotonou',  logo: '/logos/mairie-cotonou.png'    },
   { name: 'République du Bénin',logo: '/logos/benin.png'             },
