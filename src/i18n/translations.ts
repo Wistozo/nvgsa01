@@ -10,7 +10,7 @@ export const translations = {
       capital: 'Capital social : 100 000 000 FCFA',
     },
     hero: {
-      badge: 'Groupe industriel béninois depuis 2008',
+      badge: 'Groupe sous-régional reconnu depuis 2008',
       description: 'Industrie, fourniture institutionnelle et innovation solaire au service du développement économique et social en Afrique.',
       cta1: 'Découvrir NVG',
       cta2: 'Voir nos produits',
@@ -201,7 +201,7 @@ export const translations = {
       capital: 'Share capital: 100,000,000 FCFA',
     },
     hero: {
-      badge: 'Beninese industrial group since 2008',
+      badge: 'Sub-regional group recognized since 2008',
       description: 'Industry, institutional supply and solar innovation at the service of economic and social development in Africa.',
       cta1: 'Discover NVG',
       cta2: 'See our products',
