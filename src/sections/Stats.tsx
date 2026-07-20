@@ -31,7 +31,7 @@ function Counter({ target, suffix = '' }: { target: number; suffix?: string }) {
 
   useEffect(() => {
     if (!inView) return;
-    const duration = 1200;
+    const duration = 900;
     let startTime: number | null = null;
     let raf: number;
     const animate = (now: number) => {
