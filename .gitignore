@@ -4,6 +4,8 @@ dist/
 *.local
 *.tsbuildinfo
 vite-dev*.log
+.vscode/
+dist.zip
 
 # Backups & archives de travail
 backup_before_revamp/

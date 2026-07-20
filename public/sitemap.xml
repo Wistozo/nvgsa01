@@ -5,7 +5,7 @@
   <!-- Page principale -->
   <url>
     <loc>https://nvg.bj/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nvg.bj/"/>
@@ -15,7 +15,7 @@
   <!-- Pages dédiées -->
   <url>
     <loc>https://nvg.bj/a-propos</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nvg.bj/a-propos"/>
@@ -24,7 +24,7 @@
 
   <url>
     <loc>https://nvg.bj/expertises</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nvg.bj/expertises"/>
@@ -33,7 +33,7 @@
 
   <url>
     <loc>https://nvg.bj/zones</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nvg.bj/zones"/>
@@ -42,7 +42,7 @@
 
   <url>
     <loc>https://nvg.bj/produits</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nvg.bj/produits"/>

@@ -55,7 +55,7 @@ function Counter({ target, suffix = '' }: { target: number; suffix?: string }) {
 
 const STATS_CONFIG = [
   { icon: Sun,      value: 98867, suffix: '',  iconColor: 'text-nvg-orange',     accentColor: '#f97316', span: 'col-span-12 lg:col-span-8', large: true  },
-  { icon: Users,    value: 300,   suffix: '+', iconColor: 'text-nvg-green',      accentColor: '#16a34a', span: 'col-span-12 lg:col-span-4', large: false },
+  { icon: Users,    value: 300,   suffix: '+', iconColor: 'text-nvg-blue-light', accentColor: '#2563eb', span: 'col-span-12 lg:col-span-4', large: false },
   { icon: Globe,    value: 6,     suffix: '',  iconColor: 'text-nvg-blue-light', accentColor: '#2563eb', span: 'col-span-12 lg:col-span-4', large: false },
   { icon: Calendar, value: 2008,  suffix: '',  iconColor: 'text-nvg-orange',     accentColor: '#f97316', span: 'col-span-12 lg:col-span-8', large: true  },
 ];
@@ -130,7 +130,7 @@ export default function Stats() {
       {/* Blobs */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-nvg-blue/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-nvg-orange/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute top-1/2 left-0 w-[300px] h-[300px] bg-nvg-green/10 rounded-full blur-[90px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-[300px] h-[300px] bg-nvg-blue/10 rounded-full blur-[90px] pointer-events-none" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
