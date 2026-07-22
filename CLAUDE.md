@@ -19,7 +19,7 @@
 4. Intrants Agricoles (semences certifiées, machines, produits bio)
 
 **Chiffres clés réels :**
-- 38 899 sacs solaires LIGHT-TC produits
+- 98 867 sacs solaires LIGHT-TC produits
 - 631 070 serviettes hygiéniques distribuées (projet SWEDD / ONU)
 - 126 000+ filles bénéficiaires
 - 300+ collaborateurs
